@@ -50,14 +50,16 @@ if place_meeting(x, y+2, O_Floor){
 }
 
 //Attaque
-if mouse_check_button_pressed(mb_left) or gamepad_button_check_pressed(0, gp_face3){
+if is_parrying ==false and mouse_check_button_pressed(mb_left) 
+or is_parrying == false and gamepad_button_check_pressed(0, gp_face3){
 	is_attacking = true;
 	O_Attack.image_index = 0; // Reset l'animation
 	alarm_set(0, 10);
 }
 
 //Parade
-if mouse_check_button_pressed(mb_right) or gamepad_button_check_pressed(0, gp_shoulderl){
+if is_attacking == false and mouse_check_button_pressed(mb_right) 
+or is_attacking == false and gamepad_button_check_pressed(0, gp_shoulderl){
 	is_parrying = true;
 	O_Parry.image_index = 0; //Reset l'animation
 	alarm_set(1, 10);
