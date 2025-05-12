@@ -1,7 +1,7 @@
 window_set_size(1280, 720)
 move_speed = 4;
 jump_speed = 7;
-gravity_force = 0.3;
+global.gravity_force = 0.3;
 xsp = 0;
 ysp = 0;
 is_attacking = false;

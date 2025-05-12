@@ -1,6 +1,6 @@
 var stick_dir_x = gamepad_axis_value(0, gp_axislh)
 var is_grounded = false;
-ysp += gravity_force;
+ysp += global.gravity_force;
 xsp = 0;
 sprite_index = S_Player;
 
@@ -41,7 +41,7 @@ else if sign(xsp) == 1{
 }
 
 //Saut et grounded
-if place_meeting(x, y+2, O_Floor){
+if place_meeting(x, y+1, O_Floor){
 	is_grounded = true;
 	ysp = 0;
 	if keyboard_check_pressed(vk_space) or gamepad_button_check_pressed(0,gp_face1){
@@ -65,6 +65,7 @@ or is_attacking == false and gamepad_button_check_pressed(0, gp_shoulderl){
 	alarm_set(1, 10);
 }
 
+//Changer le sprite quand le joueur attaque ou pare
 if is_attacking == true{
 	sprite_index = S_Player_Attack;
 	O_Attack.visible = true;
@@ -75,4 +76,19 @@ if is_parrying == true{
 	O_Parry.visible = true;
 }
 
-move_and_collide(xsp, ysp, O_Floor);
+//Restart la room quand le joueur meurt
+if O_Player_Life_Manager.player_hp <=0{
+	room_restart()
+}
+
+//Changer l'alpha du sprite quand il est invincible
+if O_Player_Life_Manager.is_invincible == true{
+	image_alpha = 0.5;
+}
+else {
+	image_alpha = 1;
+}
+
+show_debug_message(O_Enemy_Manager.move_speed);
+
+move_and_collide(xsp, ysp, O_Floor, 10);

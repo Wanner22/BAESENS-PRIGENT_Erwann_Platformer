@@ -1,0 +1,52 @@
+xsp = move_speed;
+ysp += global.gravity_force;
+//Détecte le joueur à une certaine distance
+if abs(O_Player.x - x) < 100{
+	event_user(1);
+}
+else{
+	event_user(2);
+}
+
+if player_detected == true{
+	if O_Player.x - x < 0{
+		move_speed = -1;
+	}
+	else if O_Player.x - x > 0{
+		move_speed = 1;
+	}
+}
+
+if place_meeting(x, y+1, O_Floor){
+	ysp = 0;
+}
+//Changer de direction quand il atteint une limite
+if place_meeting(x + 2, y, O_Floor) or not place_meeting(x + 16, y + 1, O_Floor){
+	move_speed = -1;
+}
+if place_meeting(x - 2, y, O_Floor) or not place_meeting(x - 16, y + 1, O_Floor){
+	move_speed = 1;
+}
+
+//Changer le sprite en fonction de la direction
+if sign(move_speed) == -1{
+	image_xscale = -1;
+}
+if sign(move_speed) == 1{
+	image_xscale = 1;
+}
+
+if enemy_hp <= 0{
+	instance_destroy(self);
+}
+
+//Changer l'alpha du sprite quand il est invincible
+if is_invincible == true{
+	image_alpha = 0.5;
+}
+else {
+	image_alpha = 1;
+}
+
+
+move_and_collide(xsp, ysp, O_Floor, 10);
