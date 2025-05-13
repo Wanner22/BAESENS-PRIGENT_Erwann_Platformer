@@ -1,14 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"O_Bullet_Manager",
+  "%Name":"O_Effects_Manager",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"O_Floor","path":"objects/O_Floor/O_Floor.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"O_Enemy_Manager","path":"objects/O_Enemy_Manager/O_Enemy_Manager.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"O_Bullet_Manager",
+  "name":"O_Effects_Manager",
   "overriddenProperties":[],
   "parent":{
     "name":"Managers",

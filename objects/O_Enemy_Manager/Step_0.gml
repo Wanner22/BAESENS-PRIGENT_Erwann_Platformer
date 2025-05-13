@@ -23,7 +23,7 @@ if is_stuned == false{
 	if distance_to_object(O_Player) < 3{
 		move_speed = 0;
 		if alarm_get(1) <= 0 and alarm_get(2) <= 0{
-			alarm_set(1, 10);
+			alarm_set(1, 10); //Prepare attack
 		}
 	}
 	else{

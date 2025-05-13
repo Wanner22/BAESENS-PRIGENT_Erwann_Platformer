@@ -1,2 +1,2 @@
-/// @description Cooldown Parry
+/// @description Cooldown Parade
 can_parry = true;

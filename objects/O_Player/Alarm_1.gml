@@ -1,2 +1,2 @@
-/// @description is_parrying = true
+/// @description is_parrying = false
 is_parrying = false;

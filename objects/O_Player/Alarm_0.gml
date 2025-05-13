@@ -1,2 +1,2 @@
-/// @description is_attacking = true
+/// @description is_attacking = false
 is_attacking = false;

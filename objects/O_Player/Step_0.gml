@@ -1,6 +1,5 @@
 var l_stick_dir_x = gamepad_axis_value(0, gp_axislh);
-var r_stick_dir_x = gamepad_axis_value(0, gp_axisrh);
-var r_stick_dir_y = gamepad_axis_value(0, gp_axisrv);
+var l_stick_dir_y = gamepad_axis_value(0, gp_axislv);
 var is_grounded = false;
 check_attack_button = is_parrying ==false and (mouse_check_button_pressed(mb_left) or gamepad_button_check_pressed(0, gp_face3));
 check_parry_button = is_attacking == false and (keyboard_check_pressed(ord("F")) or gamepad_button_check_pressed(0, gp_shoulderl));
@@ -12,10 +11,18 @@ sprite_index = S_Player;
 
 gpu_set_tex_filter(false); //Enlève le filtre qui floute les pixels
 
+show_debug_overlay(false);
+
+
+if keyboard_check_pressed(ord("R")){
+	room_restart();
+}
+
+
 O_Action_Collision.y = y; //Fixe les coordonnées de O_Action_Collision en y
 
 if gamepad_is_connected(0){
-	shoot_dir = point_direction(x, y, x +  r_stick_dir_x, y + r_stick_dir_y);
+	shoot_dir = point_direction(x, y, x + l_stick_dir_x, y + l_stick_dir_y);
 }
 else {
 	shoot_dir = point_direction(x, y, mouse_x, mouse_y);
@@ -67,9 +74,9 @@ if check_attack_button and can_attack{
 	n_attack++;
 	is_attacking = true;
 	O_Attack.image_index = 0; // Reset l'animation
-	alarm_set(0, 10);
+	alarm_set(0, 10); //is_attacking = true
 	if alarm_get(4) <= 0 and n_attack >= 3{
-		alarm_set(4, 45);
+		alarm_set(4, 45); // cooldown après le combo
 		can_attack = false;
 	}
 }
@@ -78,8 +85,8 @@ if check_attack_button and can_attack{
 if check_parry_button and can_parry{
 	is_parrying = true;
 	O_Parry.image_index = 0; //Reset l'animation
-	alarm_set(1, 10);
-	alarm_set(3, 30);
+	alarm_set(1, 10); //is_parrying = true
+	alarm_set(3, 30); //cooldown parade
 	can_parry = false;
 }
 
@@ -107,14 +114,12 @@ else {
 	image_alpha = 1;
 }
 
-if check_aim_button{
+if check_aim_button and is_grounded{
 	is_aiming = true;
 	xsp = 0;
-	if check_shoot_button{
-		show_debug_message("coucou")
+	if check_shoot_button and l_stick_dir_x + l_stick_dir_y != 0{
 		instance_create_layer(x, y, "Instances", O_Bullet);
 	}
 }
-
 
 move_and_collide(xsp, ysp, O_Floor, 10);
