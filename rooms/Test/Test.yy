@@ -204,8 +204,8 @@
         {"name":"g_VignetteTexture","type":2,"value":"_filter_vignette_texture",},
       ],"resourceType":"GMREffectLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":false,},
     {"$GMREffectLayer":"","%Name":"Screen_Shake","depth":300,"effectEnabled":true,"effectType":"_filter_screenshake","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Screen_Shake","properties":[
-        {"name":"g_Magnitude","type":0,"value":"10",},
-        {"name":"g_ShakeSpeed","type":0,"value":"4",},
+        {"name":"g_Magnitude","type":0,"value":"7",},
+        {"name":"g_ShakeSpeed","type":0,"value":"2.5",},
         {"name":"g_NoiseTexture","type":2,"value":"_filter_screenshake_noise",},
       ],"resourceType":"GMREffectLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":false,},
     {"$GMRInstanceLayer":"","%Name":"Managers","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
