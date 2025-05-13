@@ -6,8 +6,8 @@
   "name":"O_Parry",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Actions",
+    "path":"folders/Objects/Actions.yy",
   },
   "parentObjectId":{
     "name":"O_Action_Collision",

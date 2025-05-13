@@ -8,8 +8,8 @@
   "name":"O_Action_Collision",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Actions",
+    "path":"folders/Objects/Actions.yy",
   },
   "parentObjectId":null,
   "persistent":false,

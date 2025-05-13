@@ -1,5 +1,11 @@
-var stick_dir_x = gamepad_axis_value(0, gp_axislh)
+var l_stick_dir_x = gamepad_axis_value(0, gp_axislh);
+var r_stick_dir_x = gamepad_axis_value(0, gp_axisrh);
+var r_stick_dir_y = gamepad_axis_value(0, gp_axisrv);
 var is_grounded = false;
+check_attack_button = is_parrying ==false and (mouse_check_button_pressed(mb_left) or gamepad_button_check_pressed(0, gp_face3));
+check_parry_button = is_attacking == false and (keyboard_check_pressed(ord("F")) or gamepad_button_check_pressed(0, gp_shoulderl));
+check_aim_button = mouse_check_button(mb_right) or gamepad_button_check(0, gp_shoulderlb);
+check_shoot_button = mouse_check_button_pressed(mb_left) or gamepad_button_check_pressed(0, gp_shoulderrb);
 ysp += global.gravity_force;
 xsp = 0;
 sprite_index = S_Player;
@@ -8,6 +14,12 @@ gpu_set_tex_filter(false); //Enlève le filtre qui floute les pixels
 
 O_Action_Collision.y = y; //Fixe les coordonnées de O_Action_Collision en y
 
+if gamepad_is_connected(0){
+	shoot_dir = point_direction(x, y, x +  r_stick_dir_x, y + r_stick_dir_y);
+}
+else {
+	shoot_dir = point_direction(x, y, mouse_x, mouse_y);
+}
 
 //Déplacement horizontal clavier
 if keyboard_check(ord("Q")){
@@ -25,7 +37,7 @@ if keyboard_check(ord("Q")) and keyboard_check(ord("D")){
 
 //Déplacement horizontal manette
 if gamepad_is_connected(0){
-	xsp = stick_dir_x * move_speed;
+	xsp = l_stick_dir_x * move_speed;
 }
 
 //Changer le sprite en fonction de la direction
@@ -50,19 +62,25 @@ if place_meeting(x, y+1, O_Floor){
 }
 
 //Attaque
-if is_parrying ==false and mouse_check_button_pressed(mb_left) 
-or is_parrying == false and gamepad_button_check_pressed(0, gp_face3){
+if check_attack_button and can_attack{
+	alarm_set(5, 20);
+	n_attack++;
 	is_attacking = true;
 	O_Attack.image_index = 0; // Reset l'animation
 	alarm_set(0, 10);
+	if alarm_get(4) <= 0 and n_attack >= 3{
+		alarm_set(4, 45);
+		can_attack = false;
+	}
 }
 
 //Parade
-if is_attacking == false and mouse_check_button_pressed(mb_right) 
-or is_attacking == false and gamepad_button_check_pressed(0, gp_shoulderl){
+if check_parry_button and can_parry{
 	is_parrying = true;
 	O_Parry.image_index = 0; //Reset l'animation
 	alarm_set(1, 10);
+	alarm_set(3, 30);
+	can_parry = false;
 }
 
 //Changer le sprite quand le joueur attaque ou pare
@@ -89,6 +107,14 @@ else {
 	image_alpha = 1;
 }
 
-show_debug_message(O_Enemy_Manager.move_speed);
+if check_aim_button{
+	is_aiming = true;
+	xsp = 0;
+	if check_shoot_button{
+		show_debug_message("coucou")
+		instance_create_layer(x, y, "Instances", O_Bullet);
+	}
+}
+
 
 move_and_collide(xsp, ysp, O_Floor, 10);

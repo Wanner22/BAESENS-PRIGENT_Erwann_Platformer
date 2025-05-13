@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"O_Attack",
+  "%Name":"O_Bullet",
   "eventList":[],
   "managed":true,
-  "name":"O_Attack",
+  "name":"O_Bullet",
   "overriddenProperties":[],
   "parent":{
-    "name":"Actions",
-    "path":"folders/Objects/Actions.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":{
-    "name":"O_Action_Collision",
-    "path":"objects/O_Action_Collision/O_Action_Collision.yy",
+    "name":"O_Bullet_Manager",
+    "path":"objects/O_Bullet_Manager/O_Bullet_Manager.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -31,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"S_Attack",
-    "path":"sprites/S_Attack/S_Attack.yy",
+    "name":"S_Bullet",
+    "path":"sprites/S_Bullet/S_Bullet.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }
