@@ -69,7 +69,7 @@ if place_meeting(x, y+1, O_Floor){
 }
 
 //Attaque
-if check_attack_button and can_attack{
+if check_attack_button and can_attack and not is_aiming{
 	alarm_set(5, 20);
 	n_attack++;
 	is_attacking = true;
@@ -82,7 +82,7 @@ if check_attack_button and can_attack{
 }
 
 //Parade
-if check_parry_button and can_parry{
+if check_parry_button and can_parry and not is_aiming{
 	is_parrying = true;
 	O_Parry.image_index = 0; //Reset l'animation
 	alarm_set(1, 10); //is_parrying = true
@@ -91,12 +91,12 @@ if check_parry_button and can_parry{
 }
 
 //Changer le sprite quand le joueur attaque ou pare
-if is_attacking == true{
+if is_attacking{
 	sprite_index = S_Player_Attack;
 	O_Attack.visible = true;
 }
 
-if is_parrying == true{
+if is_parrying{
 	sprite_index = S_Player_Attack;
 	O_Parry.visible = true;
 }
@@ -114,12 +114,22 @@ else {
 	image_alpha = 1;
 }
 
+//Tirs
 if check_aim_button and is_grounded{
 	is_aiming = true;
 	xsp = 0;
-	if check_shoot_button and l_stick_dir_x + l_stick_dir_y != 0{
-		instance_create_layer(x, y, "Instances", O_Bullet);
+	if check_shoot_button{
+		if gamepad_is_connected(0) and l_stick_dir_y + l_stick_dir_x != 0{
+			instance_create_layer(x, y, "Instances", O_Bullet);
+		}
+		else if not gamepad_is_connected(0){
+			instance_create_layer(x, y, "Instances", O_Bullet);
+		}
 	}
 }
+else {
+	is_aiming = false;
+}
+
 
 move_and_collide(xsp, ysp, O_Floor, 10);

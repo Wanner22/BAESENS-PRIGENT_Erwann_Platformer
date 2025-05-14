@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"Sc_Zoom_Blur",
+  "%Name":"Sc_Vibrations",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Sc_Zoom_Blur",
+  "name":"Sc_Vibrations",
   "parent":{
-    "name":"Effects",
-    "path":"folders/Scripts/Effects.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

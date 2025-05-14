@@ -7,6 +7,7 @@ if O_Player.is_parrying == false{
 }
 else {
 	if place_meeting(x, y, O_Parry){
+		Sc_Vibrations(0.3, 0.3);
 		sprite_index = S_Enemy_Stuned;
 		is_stuned = true;
 		Sc_Twist_Blur();
