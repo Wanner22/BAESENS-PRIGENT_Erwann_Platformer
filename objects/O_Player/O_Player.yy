@@ -38,8 +38,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"S_Player",
-    "path":"sprites/S_Player/S_Player.yy",
+    "name":"S_Player_IDLE",
+    "path":"sprites/S_Player_IDLE/S_Player_IDLE.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,6 +1,6 @@
 window_set_size(1280, 720)
 move_speed = 4;
-jump_speed = 7;
+jump_speed = 8;
 global.gravity_force = 0.3;
 xsp = 0;
 ysp = 0;
@@ -15,6 +15,7 @@ check_shoot_button = 0;
 n_attack = 0;
 is_aiming = false;
 shoot_dir = 0;
+is_grounded = true;
 gamepad_set_axis_deadzone(0, 0.4)
 instance_create_layer(x + 32, y, "Instances", O_Action_Collision);
 instance_create_layer(x + 32, y, "Instances", O_Attack);
