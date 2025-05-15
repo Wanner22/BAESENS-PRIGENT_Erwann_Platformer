@@ -96,7 +96,7 @@ if check_parry_button and can_parry and not is_aiming{
 	image_index = 0
 	is_parrying = true;
 	O_Parry.image_index = 0; //Reset l'animation
-	alarm_set(1, 10); //is_parrying = true
+	alarm_set(1, 15); //is_parrying = true
 	alarm_set(3, 30); //cooldown parade
 	can_parry = false;
 }
