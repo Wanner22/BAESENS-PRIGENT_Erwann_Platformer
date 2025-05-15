@@ -1,5 +1,6 @@
 var l_stick_dir_x = gamepad_axis_value(0, gp_axislh);
-var l_stick_dir_y = gamepad_axis_value(0, gp_axislv);
+var r_stick_dir_x = gamepad_axis_value(0, gp_axisrh)
+var r_stick_dir_y = gamepad_axis_value(0, gp_axisrv);
 check_attack_button = is_parrying ==false and (mouse_check_button_pressed(mb_left) or gamepad_button_check_pressed(0, gp_face3));
 check_parry_button = is_attacking == false and (keyboard_check_pressed(ord("F")) or gamepad_button_check_pressed(0, gp_shoulderl));
 check_aim_button = mouse_check_button(mb_right) or gamepad_button_check(0, gp_shoulderlb);
@@ -20,7 +21,7 @@ if keyboard_check_pressed(ord("R")){
 O_Action_Collision.y = y; //Fixe les coordonnées de O_Action_Collision en y
 
 if gamepad_is_connected(0){
-	shoot_dir = point_direction(x, y, x + l_stick_dir_x, y + l_stick_dir_y);
+	shoot_dir = point_direction(x, y, x + r_stick_dir_x, y + r_stick_dir_y);
 }
 else {
 	shoot_dir = point_direction(x, y, mouse_x, mouse_y);
@@ -130,7 +131,7 @@ if check_aim_button and is_grounded{
 	is_aiming = true;
 	xsp = 0;
 	if check_shoot_button{
-		if gamepad_is_connected(0) and l_stick_dir_y + l_stick_dir_x != 0{
+		if gamepad_is_connected(0) and r_stick_dir_y + r_stick_dir_x != 0{
 			instance_create_layer(x, y, "Instances", O_Bullet);
 		}
 		else if not gamepad_is_connected(0){
