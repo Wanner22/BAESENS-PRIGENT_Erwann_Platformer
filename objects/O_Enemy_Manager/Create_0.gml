@@ -4,5 +4,5 @@ ysp = 0;
 enemy_hp = 6;
 is_invincible = false;
 player_detected = false;
-fov = 100;
+fov = 150;
 is_stuned = false;

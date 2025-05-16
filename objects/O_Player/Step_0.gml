@@ -1,10 +1,10 @@
 var l_stick_dir_x = gamepad_axis_value(0, gp_axislh);
-var r_stick_dir_x = gamepad_axis_value(0, gp_axisrh)
-var r_stick_dir_y = gamepad_axis_value(0, gp_axisrv);
+var l_stick_dir_y = gamepad_axis_value(0, gp_axislv);
 check_attack_button = is_parrying ==false and (mouse_check_button_pressed(mb_left) or gamepad_button_check_pressed(0, gp_face3));
 check_parry_button = is_attacking == false and (keyboard_check_pressed(ord("F")) or gamepad_button_check_pressed(0, gp_shoulderl));
 check_aim_button = mouse_check_button(mb_right) or gamepad_button_check(0, gp_shoulderlb);
 check_shoot_button = mouse_check_button_pressed(mb_left) or gamepad_button_check_pressed(0, gp_shoulderrb);
+check_dash_button = keyboard_check_pressed(vk_control) or gamepad_button_check_pressed(0, gp_shoulderr);
 ysp += global.gravity_force;
 xsp = 0;
 
@@ -20,8 +20,9 @@ if keyboard_check_pressed(ord("R")){
 
 O_Action_Collision.y = y; //Fixe les coordonnées de O_Action_Collision en y
 
+//Visée
 if gamepad_is_connected(0){
-	shoot_dir = point_direction(x, y, x + r_stick_dir_x, y + r_stick_dir_y);
+	shoot_dir = point_direction(x, y, x + l_stick_dir_x, y + l_stick_dir_y);
 }
 else {
 	shoot_dir = point_direction(x, y, mouse_x, mouse_y);
@@ -46,7 +47,8 @@ if gamepad_is_connected(0){
 	xsp = l_stick_dir_x * move_speed;
 }
 
-if xsp != 0 and is_grounded == true{
+//Changer le sprite IDLE ou Course
+if not check_aim_button and xsp != 0 and is_grounded == true{
 	sprite_index = S_Player_Run;
 }
 else{
@@ -131,7 +133,7 @@ if check_aim_button and is_grounded{
 	is_aiming = true;
 	xsp = 0;
 	if check_shoot_button{
-		if gamepad_is_connected(0) and r_stick_dir_y + r_stick_dir_x != 0{
+		if gamepad_is_connected(0) and l_stick_dir_y + l_stick_dir_x != 0{
 			instance_create_layer(x, y, "Instances", O_Bullet);
 		}
 		else if not gamepad_is_connected(0){
@@ -141,6 +143,30 @@ if check_aim_button and is_grounded{
 }
 else {
 	is_aiming = false;
+}
+
+//Dash
+if check_dash_button and can_dash and xsp != 0{
+	Sc_Zoom_Blur();
+	Sc_Screen_Shake();
+	alarm_set(6, 7); //is_dashing = false
+	alarm_set(7, 45); // can_dash = true
+	is_dashing = true;
+	can_dash = false;
+}
+
+if is_dashing == true{
+	xsp *= 5;		
+}
+
+//Changer le sprite du joueur quand il saute
+if not is_grounded{
+	if ysp < 0{
+		show_debug_message("Haut");
+	}
+	else if ysp > 0{
+		show_debug_message("Bas");
+	}
 }
 
 

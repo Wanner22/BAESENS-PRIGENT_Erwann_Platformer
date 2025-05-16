@@ -1,6 +1,7 @@
 if is_stuned == false{
 	xsp = move_speed;
 	ysp += global.gravity_force;
+	
 	//Détecte le joueur à une certaine distance
 	if abs(O_Player.x - x) < fov{
 		event_user(1);
@@ -65,5 +66,4 @@ if is_invincible == true{
 else {
 	image_alpha = 1;
 }
-
 move_and_collide(xsp, ysp, O_Floor, 10);
