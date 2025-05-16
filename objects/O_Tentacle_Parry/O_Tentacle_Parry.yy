@@ -1,18 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"O_Tentacle",
+  "%Name":"O_Tentacle_Parry",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"O_Parry","path":"objects/O_Parry/O_Parry.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"O_Tentacle",
+  "name":"O_Tentacle_Parry",
   "overriddenProperties":[],
   "parent":{
     "name":"Boss",
     "path":"folders/Objects/Boss.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"O_Tentacle",
+    "path":"objects/O_Tentacle/O_Tentacle.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"S_Tentacle",
-    "path":"sprites/S_Tentacle/S_Tentacle.yy",
+    "name":"S_Tentacle_Parry",
+    "path":"sprites/S_Tentacle_Parry/S_Tentacle_Parry.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -11,8 +11,8 @@
   "name":"O_Barrel",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Boss",
+    "path":"folders/Objects/Boss.yy",
   },
   "parentObjectId":null,
   "persistent":false,

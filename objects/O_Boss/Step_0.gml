@@ -1,8 +1,15 @@
-//Attaque tentacule
-if keyboard_check_pressed(vk_numpad1){
-	instance_create_layer(O_Tentacle_Spawner.x, O_Tentacle_Spawner.y, "Projectiles", O_Tentacle);
+if is_stuned == true{
+	sprite_index = S_Boss_Stuned;
+	if alarm_get(1) <= 0{
+		alarm_set(1, 210); //is_stuned = false
+	}
 }
-//Lancer un tonneau
-if keyboard_check_pressed(vk_numpad2){
-	instance_create_layer(-32, random_range(0, 300), "Projectiles", O_Barrel);
+else{
+	sprite_index = S_Boss;
 }
+
+if boss_hp <= 0{
+	instance_destroy(self);
+}
+
+show_debug_message(boss_hp);

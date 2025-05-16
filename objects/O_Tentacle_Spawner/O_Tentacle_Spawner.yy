@@ -6,8 +6,8 @@
   "name":"O_Tentacle_Spawner",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Boss",
+    "path":"folders/Objects/Boss.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite17",
-    "path":"sprites/Sprite17/Sprite17.yy",
+    "name":"S_Tentacle",
+    "path":"sprites/S_Tentacle/S_Tentacle.yy",
   },
   "spriteMaskId":null,
   "visible":false,

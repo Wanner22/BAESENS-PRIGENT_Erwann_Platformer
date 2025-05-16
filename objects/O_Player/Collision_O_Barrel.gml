@@ -1,0 +1,1 @@
+Sc_Reduce_Player_Life(1);
