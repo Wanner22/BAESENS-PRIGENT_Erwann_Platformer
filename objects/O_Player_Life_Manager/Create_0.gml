@@ -1,2 +1,2 @@
-player_hp = 5;
+player_hp = 100;
 is_invincible = false;

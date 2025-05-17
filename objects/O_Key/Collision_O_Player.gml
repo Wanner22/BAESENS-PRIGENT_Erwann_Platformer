@@ -1,0 +1,1 @@
+O_Key_Manager.key_amount +=1;

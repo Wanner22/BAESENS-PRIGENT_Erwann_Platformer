@@ -1,3 +1,4 @@
-for (var i = 0; i < player_hp; i++){
-	draw_sprite(S_Heart, 0, i*32, 0);
-}
+draw_set_font(F_UI);
+draw_set_color(c_white);
+draw_text(32, 16, "LIFE");
+draw_healthbar(32, 80, 350, 100, player_hp, c_grey, c_red, c_green, 0, true, true);

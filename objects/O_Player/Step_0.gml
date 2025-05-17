@@ -170,4 +170,4 @@ if not is_grounded{
 }
 
 
-move_and_collide(xsp, ysp, O_Floor, 10);
+move_and_collide(xsp, ysp, [O_Floor, O_Collision], 10);
