@@ -374,6 +374,9 @@
     {"name":"inst_7D0B73EA","path":"rooms/R_Test/R_Test.yy",},
     {"name":"inst_5730C453","path":"rooms/R_Test/R_Test.yy",},
     {"name":"inst_237911AB","path":"rooms/R_Test/R_Test.yy",},
+    {"name":"inst_7E0B1E3","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_71B0065E","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_1C25C45A","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":false,
   "layers":[
