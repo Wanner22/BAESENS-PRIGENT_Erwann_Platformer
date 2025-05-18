@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"S_Collision",
+  "%Name":"S_GoToRoom_Collision",
   "bboxMode":0,
   "bbox_bottom":31,
   "bbox_left":0,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"ec3ae865-6ff3-4b21-b083-b9c799c795ca","name":"ec3ae865-6ff3-4b21-b083-b9c799c795ca","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"add43059-adc9-4a78-8cfc-ec5006d802d4","name":"add43059-adc9-4a78-8cfc-ec5006d802d4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":32,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"cbe5acf5-d316-4bbd-9244-9d2dc0070651","blendMode":0,"displayName":"default","isLocked":false,"name":"cbe5acf5-d316-4bbd-9244-9d2dc0070651","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"bf3af2f0-1531-46ef-a10c-31440188d0a6","blendMode":0,"displayName":"default","isLocked":false,"name":"bf3af2f0-1531-46ef-a10c-31440188d0a6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"S_Collision",
+  "name":"S_GoToRoom_Collision",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"S_Collision",
+    "%Name":"S_GoToRoom_Collision",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"S_Collision",
+    "name":"S_GoToRoom_Collision",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -71,8 +71,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ec3ae865-6ff3-4b21-b083-b9c799c795ca","path":"sprites/S_Collision/S_Collision.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7f896998-d40f-4bf8-aa4a-0ddefd355531","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"add43059-adc9-4a78-8cfc-ec5006d802d4","path":"sprites/S_GoToRoom_Collision/S_GoToRoom_Collision.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"bae54bee-14ee-4d9f-89ad-637489892243","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
