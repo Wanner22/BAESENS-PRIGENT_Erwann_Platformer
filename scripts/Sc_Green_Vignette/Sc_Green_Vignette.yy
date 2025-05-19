@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Sc_Green_Vignette",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Sc_Green_Vignette",
+  "parent":{
+    "name":"Effects",
+    "path":"folders/Scripts/Effects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

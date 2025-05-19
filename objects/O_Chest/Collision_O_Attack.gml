@@ -3,7 +3,10 @@ if O_Attack.visible and not is_opened{
 		O_Coin_Manager.coin_amount += 20;
 	}
 	else if obj == S_Heal{
-		O_Player_Life_Manager.player_hp +=20;
+		if O_Player_Life_Manager.player_hp < 100{
+			O_Player_Life_Manager.player_hp +=20;
+			Sc_Green_Vignette();
+		}
 	}
 	else if obj == S_Key{
 		O_Key_Manager.key_amount += 1;

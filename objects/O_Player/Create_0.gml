@@ -24,3 +24,4 @@ gamepad_set_axis_deadzone(0, 0.4);
 instance_create_layer(x + 32, y, "Instances", O_Action_Collision);
 instance_create_layer(x + 32, y, "Instances", O_Attack);
 instance_create_layer(x + 32, y, "Instances", O_Parry);
+instance_create_layer(x, y - 10, "instances", O_Player_Arm);

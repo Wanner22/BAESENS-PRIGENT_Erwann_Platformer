@@ -128,20 +128,33 @@ else {
 	image_alpha = 1;
 }
 
-//Tirs
+//Tirs et visée
 if check_aim_button and is_grounded{
+	O_Player_Arm.visible = true;
+	if O_Player.shoot_dir > 90 and O_Player.shoot_dir < 270{
+		image_xscale = -1;
+		O_Action_Collision.x = x + sprite_width/2; //Fixe les coordonnées de O_Action_Collision en x
+		O_Action_Collision.image_xscale = -1; //Orienter le sprite
+	}
+	else{
+		image_xscale = 1;
+		O_Action_Collision.x = x + sprite_width/2; //Fixe les coordonnées de O_Action_Collision en x
+		O_Action_Collision.image_xscale = 1; //Orienter le sprite
+	}
+	sprite_index = S_Player_Shoot;
 	is_aiming = true;
 	xsp = 0;
 	if check_shoot_button{
 		if gamepad_is_connected(0) and l_stick_dir_y + l_stick_dir_x != 0{
-			instance_create_layer(x, y, "Instances", O_Bullet);
+			instance_create_layer(x, y - 17, "Instances", O_Bullet);
 		}
 		else if not gamepad_is_connected(0){
-			instance_create_layer(x, y, "Instances", O_Bullet);
+			instance_create_layer(x, y - 17, "Instances", O_Bullet);
 		}
 	}
 }
 else {
+	O_Player_Arm.visible = false;
 	is_aiming = false;
 }
 
@@ -160,12 +173,12 @@ if is_dashing == true{
 }
 
 //Changer le sprite du joueur quand il saute
-if not is_grounded{
+if not is_grounded and not is_attacking{
 	if ysp < 0{
-		show_debug_message("Haut");
+		sprite_index = S_Player_Jump_Up;
 	}
 	else if ysp > 0{
-		show_debug_message("Bas");
+		sprite_index = S_Player_Jump_Down;
 	}
 }
 
