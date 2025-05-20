@@ -10,3 +10,4 @@
 |Dash|Ctrl|RB|
 |Viser (maintenir)|Clic droit|LT|
 |Tirer (en visant)|Clic gauche|RT|
+|Pause|échap||
