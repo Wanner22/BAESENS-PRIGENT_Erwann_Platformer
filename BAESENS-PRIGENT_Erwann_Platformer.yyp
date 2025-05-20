@@ -125,7 +125,7 @@
     {"id":{"name":"S_Player_Test","path":"sprites/S_Player_Test/S_Player_Test.yy",},},
     {"id":{"name":"S_Tentacle_Parry","path":"sprites/S_Tentacle_Parry/S_Tentacle_Parry.yy",},},
     {"id":{"name":"S_Tentacle","path":"sprites/S_Tentacle/S_Tentacle.yy",},},
-    {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},},
+    {"id":{"name":"Ts_Environment","path":"tilesets/Ts_Environment/Ts_Environment.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

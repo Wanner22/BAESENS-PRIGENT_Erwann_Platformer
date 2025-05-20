@@ -69,7 +69,7 @@ else if sign(xsp) == 1{
 }
 
 //Saut et grounded
-if place_meeting(x, y+2, O_Floor){
+if place_meeting(x, y+2, O_Collision){
 	is_grounded = true;
 	ysp = 0;
 	if keyboard_check_pressed(vk_space) or gamepad_button_check_pressed(0,gp_face1){
@@ -183,4 +183,4 @@ if not is_grounded and not is_attacking{
 }
 
 
-move_and_collide(xsp, ysp, [O_Floor, O_Collision], 10);
+move_and_collide(xsp, ysp, O_Collision, 10);

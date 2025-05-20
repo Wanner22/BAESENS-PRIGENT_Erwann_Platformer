@@ -1,6 +1,6 @@
 {
   "$GMTileSet":"v1",
-  "%Name":"TileSet1",
+  "%Name":"Ts_Environment",
   "autoTileSets":[
     {"$GMAutoTileSet":"","%Name":"sol","closed_edge":false,"name":"sol","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[
         47,43,44,32,45,36,33,41,46,35,37,40,34,39,38,42,29,19,23,27,28,16,20,24,30,17,21,25,31,18,22,26,14,15,
@@ -12,7 +12,7 @@
     "SerialiseWidth":0,
     "TileSerialiseData":[],
   },
-  "name":"TileSet1",
+  "name":"Ts_Environment",
   "out_columns":7,
   "out_tilehborder":2,
   "out_tilevborder":2,
