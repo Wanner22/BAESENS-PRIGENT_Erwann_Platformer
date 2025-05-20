@@ -71,6 +71,7 @@
     {"name":"S_Enemy_Attack","order":1,"path":"sprites/S_Enemy_Attack/S_Enemy_Attack.yy",},
     {"name":"S_Enemy_Prepare_Attack","order":2,"path":"sprites/S_Enemy_Prepare_Attack/S_Enemy_Prepare_Attack.yy",},
     {"name":"S_Enemy_Stuned","order":3,"path":"sprites/S_Enemy_Stuned/S_Enemy_Stuned.yy",},
+    {"name":"S_Environment_Spritesheet","order":14,"path":"sprites/S_Environment_Spritesheet/S_Environment_Spritesheet.yy",},
     {"name":"S_GoToRoom_Collision","order":1,"path":"sprites/S_GoToRoom_Collision/S_GoToRoom_Collision.yy",},
     {"name":"S_Green_Vignette","order":13,"path":"sprites/S_Green_Vignette/S_Green_Vignette.yy",},
     {"name":"S_Heal","order":1,"path":"sprites/S_Heal/S_Heal.yy",},
