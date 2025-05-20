@@ -146,10 +146,10 @@ if check_aim_button and is_grounded{
 	xsp = 0;
 	if check_shoot_button{
 		if gamepad_is_connected(0) and l_stick_dir_y + l_stick_dir_x != 0{
-			instance_create_layer(x, y - 17, "Instances", O_Bullet);
+			instance_create_layer(x, y - 17, "Player", O_Bullet);
 		}
 		else if not gamepad_is_connected(0){
-			instance_create_layer(x, y - 17, "Instances", O_Bullet);
+			instance_create_layer(x, y - 17, "Player", O_Bullet);
 		}
 	}
 }

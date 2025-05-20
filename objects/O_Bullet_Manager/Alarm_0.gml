@@ -1,2 +1,2 @@
 /// @description Destroy le projectile
-instance_destroy(self);
+instance_destroy();

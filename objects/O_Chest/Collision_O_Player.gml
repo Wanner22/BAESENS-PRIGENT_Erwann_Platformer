@@ -1,4 +1,4 @@
-if O_Attack.visible and not is_opened{
+if O_Player.check_attack_button and not is_opened{
 	if obj == S_Coin{
 		O_Coin_Manager.coin_amount += 20;
 	}

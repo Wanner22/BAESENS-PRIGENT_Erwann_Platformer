@@ -11,4 +11,8 @@ switch button_id{
 	case 2: //Quitter
 		game_end();
 	break;
+	
+	case 3: //Retour
+		O_Pause_Manager.show_controls = false;
+	break;
 }
