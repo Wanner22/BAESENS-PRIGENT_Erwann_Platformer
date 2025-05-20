@@ -1,5 +1,5 @@
 # The Curse of Oak Island
-## Dans ce proto, les mécaniques principales du jeu et le combat de boss sont testables dans une petite zone qui ne sera pas présente dans le jeu final
+## Dans ce prototype, les mécaniques principales du jeu et le combat de boss sont testables dans une petite zone qui ne sera pas présente dans le jeu final
 ### Touches :
 |Action|Claveri/Souris|Manette|
 |---|---|---|
