@@ -8,10 +8,6 @@ check_dash_button = keyboard_check_pressed(vk_control) or gamepad_button_check_p
 ysp += global.gravity_force;
 xsp = 0;
 
-gpu_set_tex_filter(false); //Enlève le filtre qui floute les pixels
-
-show_debug_overlay(false);
-
 
 if keyboard_check_pressed(ord("R")){
 	room_restart();
@@ -29,17 +25,7 @@ else {
 }
 
 //Déplacement horizontal clavier
-if keyboard_check(ord("Q")){
-	xsp = -move_speed;
-}
-
-if keyboard_check(ord("D")){
-	xsp = move_speed;
-}
-
-if keyboard_check(ord("Q")) and keyboard_check(ord("D")){
-	xsp = 0;
-}
+xsp = (keyboard_check(ord("D")) - keyboard_check(ord("Q"))) * move_speed;
 
 
 //Déplacement horizontal manette
@@ -69,7 +55,11 @@ else if sign(xsp) == 1{
 }
 
 //Saut et grounded
-if place_meeting(x, y + 1, O_Collision){
+if place_meeting(x, y - 1, O_Collision_Manager.collisions){
+	ysp = global.gravity_force;
+}
+
+if place_meeting(x, y + 1, O_Collision_Manager.collisions){
 	pos_x = xprevious;
 	pos_y = yprevious;
 	is_grounded = true;
@@ -184,5 +174,18 @@ if not is_grounded and not is_attacking{
 	}
 }
 
+var _movingPlatform = instance_place(x, y + max(1, ysp), O_Platform);
+if _movingPlatform and bbox_bottom <= _movingPlatform.bbox_top{
+	if ysp > 0{
+		while !place_meeting(x, y + sign(ysp), O_Platform){
+			y += sign(ysp);
+		}
+		ysp = 0;
+	}
+	x =  _movingPlatform.path_speed;
+	y = _movingPlatform.path_speed;
+}
 
-move_and_collide(xsp, ysp, O_Collision, 10);
+
+
+move_and_collide(xsp, ysp, O_Collision_Manager.collisions, 10);

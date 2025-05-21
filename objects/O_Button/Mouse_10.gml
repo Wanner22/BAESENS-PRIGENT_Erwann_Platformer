@@ -1,1 +1,1 @@
-image_alpha = 0.5;
+is_selected = true;

@@ -19,6 +19,7 @@
   "height":64,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"a498d839-33a3-4827-943d-67584b3bf65b","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"a498d839-33a3-4827-943d-67584b3bf65b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"990e1d84-4374-4547-b505-0ea40ef6c23f","blendMode":0,"displayName":"default","isLocked":false,"name":"990e1d84-4374-4547-b505-0ea40ef6c23f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"S_WChest_Closed",

@@ -31,16 +31,16 @@ if is_stuned == false{
 		sprite_index = S_Enemy;
 	}
 
-	if place_meeting(x, y+1, O_Collision){
+	if place_meeting(x, y+1, O_Collision_Manager.collisions){
 		ysp = 0;
 	}
 
 	if player_detected == false{
 		//Changer de direction quand il atteint une limite
-		if place_meeting(x + 2, y, O_Collision) or not place_meeting(x + 16, y + 1, O_Collision){
+		if place_meeting(x + 2, y, O_Collision_Manager.collisions) or not place_meeting(x + 16, y + 1, O_Collision_Manager.collisions){
 			move_speed = -1;
 		}
-		if place_meeting(x - 2, y, O_Collision) or not place_meeting(x - 16, y + 1, O_Collision){
+		if place_meeting(x - 2, y, O_Collision_Manager.collisions) or not place_meeting(x - 16, y + 1, O_Collision_Manager.collisions){
 			move_speed = 1;
 		}
 	}
@@ -66,4 +66,4 @@ if is_invincible == true{
 else {
 	image_alpha = 1;
 }
-move_and_collide(xsp, ysp, O_Collision, 10);
+move_and_collide(xsp, ysp, O_Collision_Manager.collisions, 10);

@@ -19,6 +19,7 @@
   "height":64,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"70362f2b-21e9-4829-adac-14b5d1901a52","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"70362f2b-21e9-4829-adac-14b5d1901a52","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"63c03f3d-f12b-4a4a-8af9-d5322f91fde2","blendMode":0,"displayName":"default","isLocked":false,"name":"63c03f3d-f12b-4a4a-8af9-d5322f91fde2","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"S_NChest_Opened",
