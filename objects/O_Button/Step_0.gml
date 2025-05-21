@@ -5,6 +5,9 @@ if gamepad_is_connected(0){
 	if gamepad_button_check_pressed(0, gp_padu) and selected_id > 0{
 		selected_id--;
 	}
+	if layer_get_visible("ControlsLayer"){
+		selected_id = 3;
+	}
 	if selected_id == button_id{
 		is_selected = true;
 		if gamepad_button_check_pressed(0, gp_face1){
