@@ -69,7 +69,9 @@ else if sign(xsp) == 1{
 }
 
 //Saut et grounded
-if place_meeting(x, y+2, O_Collision){
+if place_meeting(x, y + 1, O_Collision){
+	pos_x = xprevious;
+	pos_y = yprevious;
 	is_grounded = true;
 	ysp = 0;
 	if keyboard_check_pressed(vk_space) or gamepad_button_check_pressed(0,gp_face1){
@@ -159,7 +161,7 @@ else {
 }
 
 //Dash
-if check_dash_button and can_dash and xsp != 0{
+if check_dash_button and can_dash and xsp != 0 and not is_grounded{
 	Sc_Zoom_Blur();
 	Sc_Screen_Shake();
 	alarm_set(6, 7); //is_dashing = false
@@ -169,7 +171,7 @@ if check_dash_button and can_dash and xsp != 0{
 }
 
 if is_dashing == true{
-	xsp *= 5;		
+	xsp *= 5;	
 }
 
 //Changer le sprite du joueur quand il saute

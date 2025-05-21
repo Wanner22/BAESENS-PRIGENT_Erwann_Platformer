@@ -2,7 +2,7 @@
 if O_Player.is_parrying == false{
 	sprite_index = S_Enemy_Attack;
 	if distance_to_object(O_Player) < 3{
-		Sc_Reduce_Player_Life(20);
+		Sc_Reduce_Player_Life(20, 90);
 	}
 }
 else {

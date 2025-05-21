@@ -3,7 +3,7 @@
   "%Name":"Ts_Environment",
   "autoTileSets":[
     {"$GMAutoTileSet":"","%Name":"sol","closed_edge":false,"name":"sol","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[
-        47,43,44,32,45,36,33,41,46,35,37,40,34,39,38,42,29,19,23,27,28,16,20,24,30,17,21,25,31,18,22,26,14,15,
+        48,43,44,32,45,36,33,41,46,35,37,40,34,39,38,42,29,19,23,27,28,16,20,24,30,17,21,25,31,18,22,26,14,15,
         1,5,2,6,3,7,4,8,11,10,9,12,13,
       ],},
   ],
@@ -39,5 +39,5 @@
   "tileWidth":32,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":48,
+  "tile_count":56,
 }

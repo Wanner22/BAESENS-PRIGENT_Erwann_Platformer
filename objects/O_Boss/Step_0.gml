@@ -11,5 +11,3 @@ else{
 if boss_hp <= 0{
 	instance_destroy(self);
 }
-
-show_debug_message(boss_hp);

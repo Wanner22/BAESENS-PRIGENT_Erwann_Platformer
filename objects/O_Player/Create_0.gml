@@ -19,6 +19,8 @@ check_dash_button = 0;
 n_attack = 0;
 is_aiming = false;
 is_grounded = true;
+pos_x = 0;
+pos_y = 0;
 gamepad_set_vibration(0, 0, 0);
 gamepad_set_axis_deadzone(0, 0.4);
 instance_create_layer(x + 32, y, "Collisions", O_Action_Collision);

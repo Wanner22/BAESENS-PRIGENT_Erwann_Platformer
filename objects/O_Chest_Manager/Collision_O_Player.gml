@@ -11,7 +11,7 @@ if O_Player.check_attack_button and not is_opened{
 	else if obj == S_Key{
 		O_Key_Manager.key_amount += 1;
 	}
-	sprite_index = S_Chest_Opened;
+	sprite_index = opened_spr;
 	is_opened = true;
 	is_shown = true;
 	alarm_set(0, 60); //is_shown = false
