@@ -64,6 +64,7 @@
     {"name":"O_WChest","order":1,"path":"objects/O_WChest/O_WChest.yy",},
     {"name":"R_Boss","order":1,"path":"rooms/R_Boss/R_Boss.yy",},
     {"name":"R_Level1","order":3,"path":"rooms/R_Level1/R_Level1.yy",},
+    {"name":"R_Level2","order":4,"path":"rooms/R_Level2/R_Level2.yy",},
     {"name":"R_RoomParent","order":2,"path":"rooms/R_RoomParent/R_RoomParent.yy",},
     {"name":"RoomUI","order":15,"path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"Sc_Green_Vignette","order":4,"path":"scripts/Sc_Green_Vignette/Sc_Green_Vignette.yy",},

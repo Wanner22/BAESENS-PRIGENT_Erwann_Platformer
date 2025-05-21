@@ -91,6 +91,7 @@
     {"id":{"name":"Pth_Path1","path":"paths/Pth_Path1/Pth_Path1.yy",},},
     {"id":{"name":"R_Boss","path":"rooms/R_Boss/R_Boss.yy",},},
     {"id":{"name":"R_Level1","path":"rooms/R_Level1/R_Level1.yy",},},
+    {"id":{"name":"R_Level2","path":"rooms/R_Level2/R_Level2.yy",},},
     {"id":{"name":"R_RoomParent","path":"rooms/R_RoomParent/R_RoomParent.yy",},},
     {"id":{"name":"R_Test","path":"rooms/R_Test/R_Test.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
@@ -152,6 +153,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"R_Level2","path":"rooms/R_Level2/R_Level2.yy",},},
     {"roomId":{"name":"R_Level1","path":"rooms/R_Level1/R_Level1.yy",},},
     {"roomId":{"name":"R_Test","path":"rooms/R_Test/R_Test.yy",},},
     {"roomId":{"name":"R_Boss","path":"rooms/R_Boss/R_Boss.yy",},},
