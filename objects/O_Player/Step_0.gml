@@ -4,7 +4,7 @@ check_attack_button = is_parrying ==false and (mouse_check_button_pressed(mb_lef
 check_parry_button = is_attacking == false and (keyboard_check_pressed(ord("F")) or gamepad_button_check_pressed(0, gp_shoulderl));
 check_aim_button = mouse_check_button(mb_right) or gamepad_button_check(0, gp_shoulderlb);
 check_shoot_button = mouse_check_button_pressed(mb_left) or gamepad_button_check_pressed(0, gp_shoulderrb);
-check_dash_button = keyboard_check_pressed(vk_control) or gamepad_button_check_pressed(0, gp_shoulderr);
+check_dash_button = keyboard_check_pressed(vk_shift) or gamepad_button_check_pressed(0, gp_shoulderr);
 ysp += global.gravity_force;
 xsp = 0;
 
