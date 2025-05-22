@@ -37,4 +37,3 @@ if is_selected{
 else{
 	image_alpha = 1;
 }
-is_selected = false;
