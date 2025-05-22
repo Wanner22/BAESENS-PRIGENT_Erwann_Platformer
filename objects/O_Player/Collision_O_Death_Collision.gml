@@ -1,5 +1,5 @@
 is_dashing= false;
-Sc_Reduce_Player_Life(10, 1);
+Sc_Reduce_Player_Life(10, 60);
 if not place_meeting(pos_x + 5, pos_y + 5, O_Collision_Manager.collisions){
 	x = pos_x - 64;
 }

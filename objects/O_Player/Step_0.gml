@@ -149,7 +149,7 @@ else {
 }
 
 //Dash
-if check_dash_button and can_dash and xsp != 0 and not is_grounded{
+if check_dash_button and can_dash{
 	Sc_Zoom_Blur();
 	Sc_Screen_Shake();
 	alarm_set(6, 7); //is_dashing = false
@@ -158,8 +158,8 @@ if check_dash_button and can_dash and xsp != 0 and not is_grounded{
 	can_dash = false;
 }
 
-if is_dashing == true{
-	xsp *= 5;	
+if is_dashing{
+	xsp = image_xscale * 25;
 }
 
 //Changer le sprite du joueur quand il saute

@@ -4,7 +4,6 @@ execute_button = function(){
 	switch button_id{
 		case 0: //Continuer
 			O_Pause_Manager.paused = false;
-			O_Pause_Manager.update_pause();
 		break;
 	
 		case 1: //Controles
