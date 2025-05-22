@@ -34,11 +34,13 @@ if gamepad_is_connected(0){
 }
 
 //Changer le sprite IDLE ou Course
-if not check_aim_button and xsp != 0 and is_grounded == true{
-	sprite_index = S_Player_Run;
-}
-else{
-	sprite_index = S_Player_IDLE;
+if not is_aiming{
+	if xsp != 0 and is_grounded == true{
+		sprite_index = S_Player_Run;
+	}
+	else{
+		sprite_index = S_Player_IDLE;
+	}
 }
 
 
@@ -107,11 +109,6 @@ if is_parrying{
 	O_Parry.visible = true;
 }
 
-//Restart la room quand le joueur meurt
-if O_Player_Life_Manager.player_hp <=0{
-	room_restart()
-}
-
 //Changer l'alpha du sprite quand il est invincible
 if O_Player_Life_Manager.is_invincible == true{
 	image_alpha = 0.5;
@@ -121,7 +118,7 @@ else {
 }
 
 //Tirs et visée
-if check_aim_button and is_grounded{
+if check_aim_button and is_grounded and O_Gun_Manager.can_shoot{
 	O_Player_Arm.visible = true;
 	if O_Player.shoot_dir > 90 and O_Player.shoot_dir < 270{
 		image_xscale = -1;
@@ -136,7 +133,8 @@ if check_aim_button and is_grounded{
 	sprite_index = S_Player_Shoot;
 	is_aiming = true;
 	xsp = 0;
-	if check_shoot_button{
+	if check_shoot_button and O_Bullet_Manager.bullet_amount > 0{
+		O_Bullet_Manager.bullet_amount--;
 		if gamepad_is_connected(0) and l_stick_dir_y + l_stick_dir_x != 0{
 			instance_create_layer(x, y - 17, "Player", O_Bullet);
 		}
@@ -174,18 +172,5 @@ if not is_grounded and not is_attacking{
 	}
 }
 
-var _movingPlatform = instance_place(x, y + max(1, ysp), O_Platform);
-if _movingPlatform and bbox_bottom <= _movingPlatform.bbox_top{
-	if ysp > 0{
-		while !place_meeting(x, y + sign(ysp), O_Platform){
-			y += sign(ysp);
-		}
-		ysp = 0;
-	}
-	x =  _movingPlatform.path_speed;
-	y = _movingPlatform.path_speed;
-}
 
-
-
-move_and_collide(xsp, ysp, O_Collision_Manager.collisions, 10);
+move_and_collide(xsp, ysp, O_Collision_Manager.collisions, 50);

@@ -39,4 +39,3 @@ else{
 	image_alpha = 1;
 }
 is_selected = false;
-show_debug_message(selected_id)
