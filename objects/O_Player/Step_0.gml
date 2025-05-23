@@ -171,7 +171,6 @@ if not is_grounded and not is_attacking{
 		sprite_index = S_Player_Jump_Down;
 	}
 }
-show_debug_message(is_grounded)
 
 
 move_and_collide(xsp, ysp, O_Collision_Manager.collisions, 50);
