@@ -9,10 +9,16 @@ if paused{
 	instance_deactivate_all(true);
 	if show_controls{
 		layer_set_visible("ControlsLayer", true);
+		if gamepad_button_check_pressed(0, gp_face2){
+			show_controls = false;
+		}
 	}
 	else{
 		layer_set_visible("ControlsLayer", false);
 		layer_set_visible("PauseLayer", true);
+		if gamepad_button_check_pressed(0, gp_face2){
+			paused = false;
+		}
 	}
 }
 else{

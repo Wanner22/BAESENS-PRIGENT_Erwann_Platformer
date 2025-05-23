@@ -2,6 +2,7 @@ window_set_size(1366, 768);
 gpu_set_tex_filter(false); //Enlève le filtre qui floute les pixels
 show_debug_overlay(true);
 layer_set_visible("Collisions", false);
+is_debug = false;
 shoot_dir = 0;
 move_speed = 4.5;
 jump_speed = 8;
@@ -30,3 +31,9 @@ instance_create_layer(x + 32, y, "Collisions", O_Action_Collision);
 instance_create_layer(x + 32, y, "Player", O_Attack);
 instance_create_layer(x + 32, y, "Player", O_Parry);
 instance_create_layer(x, y - 10, "Player", O_Player_Arm);
+
+if is_debug{
+	if room != R_Level2{
+		room_goto(R_Level2);
+	}
+}

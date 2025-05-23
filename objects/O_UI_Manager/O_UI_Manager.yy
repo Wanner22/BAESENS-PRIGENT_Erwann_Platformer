@@ -1,16 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"O_Death_Collision",
-  "eventList":[],
+  "%Name":"O_UI_Manager",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"O_Death_Collision",
+  "name":"O_UI_Manager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Collisions",
-    "path":"folders/Objects/Collisions.yy",
+    "name":"Managers",
+    "path":"folders/Objects/Managers.yy",
   },
   "parentObjectId":null,
-  "persistent":false,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -27,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"S_Death_Collision",
-    "path":"sprites/S_Death_Collision/S_Death_Collision.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
