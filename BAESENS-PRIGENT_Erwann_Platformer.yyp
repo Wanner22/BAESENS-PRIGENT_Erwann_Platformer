@@ -84,6 +84,7 @@
     {"id":{"name":"O_NChest","path":"objects/O_NChest/O_NChest.yy",},},
     {"id":{"name":"O_Parallax_Manager","path":"objects/O_Parallax_Manager/O_Parallax_Manager.yy",},},
     {"id":{"name":"O_Parry","path":"objects/O_Parry/O_Parry.yy",},},
+    {"id":{"name":"O_Pause_Manager","path":"objects/O_Pause_Manager/O_Pause_Manager.yy",},},
     {"id":{"name":"O_Player_Arm","path":"objects/O_Player_Arm/O_Player_Arm.yy",},},
     {"id":{"name":"O_Player_Life_Manager","path":"objects/O_Player_Life_Manager/O_Player_Life_Manager.yy",},},
     {"id":{"name":"O_Player","path":"objects/O_Player/O_Player.yy",},},

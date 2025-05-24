@@ -56,6 +56,7 @@
     {"name":"O_Locked_Door","order":2,"path":"objects/O_Locked_Door/O_Locked_Door.yy",},
     {"name":"O_Parallax_Manager","order":12,"path":"objects/O_Parallax_Manager/O_Parallax_Manager.yy",},
     {"name":"O_Parry","order":2,"path":"objects/O_Parry/O_Parry.yy",},
+    {"name":"O_Pause_Manager","order":13,"path":"objects/O_Pause_Manager/O_Pause_Manager.yy",},
     {"name":"O_Player_Arm","order":1,"path":"objects/O_Player_Arm/O_Player_Arm.yy",},
     {"name":"O_Player_Life_Manager","order":1,"path":"objects/O_Player_Life_Manager/O_Player_Life_Manager.yy",},
     {"name":"O_Sphere","order":22,"path":"objects/O_Sphere/O_Sphere.yy",},
