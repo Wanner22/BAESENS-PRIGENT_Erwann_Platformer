@@ -3,19 +3,16 @@
 function Sc_Pause(){
 	if paused{
 		if not surface_exists(pause_surface){
-			layer_set_visible("Screen_Shake", false);
-			layer_set_visible("Vignette", false);
-			layer_set_visible("Twist_Blur", false);
-			layer_set_visible("Zoom_Blur", false);
-			layer_set_visible("Green_Vignette", false);
-			gamepad_set_vibration(0, 0, 0);
+			Sc_Deactivate_Effects();
 			instance_deactivate_all(true);
 			pause_surface = surface_create(1920, 1080);
 			surface_set_target(pause_surface);
+			draw_set_alpha(1);
 			draw_surface(application_surface, 0, 0);
 			surface_reset_target();
 		}
 		else{
+			draw_set_alpha(1);
 			draw_surface(pause_surface, 0, 0);
 		}
 	}

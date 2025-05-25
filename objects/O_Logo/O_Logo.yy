@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"O_Bar",
+  "%Name":"O_Logo",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"O_Bar",
+  "name":"O_Logo",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -26,15 +25,13 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"can_appear","filters":[],"listItems":[],"multiselect":false,"name":"can_appear","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
-    "name":"S_Bar",
-    "path":"sprites/S_Bar/S_Bar.yy",
+    "name":"S_Logo",
+    "path":"sprites/S_Logo/S_Logo.yy",
   },
   "spriteMaskId":null,
   "visible":true,

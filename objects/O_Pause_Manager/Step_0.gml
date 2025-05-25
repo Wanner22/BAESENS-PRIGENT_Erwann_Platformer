@@ -3,7 +3,12 @@ var check_back_button = keyboard_check_pressed(vk_backspace) or gamepad_button_c
 
 if check_pause_button{
 	paused = !paused;
+	if show_controls{
+		paused = false;
+		show_controls = false;
+	}
 }
+
 if not paused{
 	show_controls = false;
 }

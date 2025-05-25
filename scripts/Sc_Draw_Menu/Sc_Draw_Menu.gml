@@ -12,14 +12,20 @@ function Sc_Draw_Menu(){
 		draw_text(1920/2, 1080/2, "PAUSE");
 		for (var i = 0; i < array_length(options); i++){
 			var text = "";
+			var x_scale = 1;
+			var y_scale = 1;
 			if i = selected_index{
 				text += ">" + options[i] + "<";
+				x_scale = 1.2;
+				y_scale = 1.2;
 			}
 			else{
 				text = options[i];
+				x_scale = 1;
+				y_scale = 1
 				draw_set_alpha(0.4);
 			}
-			draw_text(1920/2, 1080/2 + 128 + i * 64, text);
+			draw_text_transformed(1920/2, 1080/2 + 128 + i * 64, text, x_scale, y_scale, 0);
 			draw_set_alpha(1);
 		}
 	}
