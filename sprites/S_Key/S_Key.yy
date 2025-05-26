@@ -3,7 +3,7 @@
   "%Name":"S_Key",
   "bboxMode":0,
   "bbox_bottom":31,
-  "bbox_left":10,
+  "bbox_left":8,
   "bbox_right":25,
   "bbox_top":0,
   "collisionKind":1,

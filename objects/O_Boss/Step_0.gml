@@ -1,5 +1,4 @@
 if is_stuned == true{
-	sprite_index = S_Boss_Stuned;
 	if alarm_get(1) <= 0{
 		alarm_set(1, 210); //is_stuned = false
 	}
