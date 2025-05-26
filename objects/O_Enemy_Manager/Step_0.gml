@@ -54,10 +54,10 @@ if not is_stuned and not O_Death_Manager.is_dead{
 
 		//Changer le sprite en fonction de la direction
 		if sign(move_speed) == -1{
-			image_xscale = -1;
+			image_xscale = 1;
 		}
 		if sign(move_speed) == 1{
-			image_xscale = 1;
+			image_xscale = -1;
 		}
 
 		if enemy_hp <= 0{

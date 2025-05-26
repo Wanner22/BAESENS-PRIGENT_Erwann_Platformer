@@ -106,6 +106,7 @@
     {"id":{"name":"R_RoomParent","path":"rooms/R_RoomParent/R_RoomParent.yy",},},
     {"id":{"name":"R_Test","path":"rooms/R_Test/R_Test.yy",},},
     {"id":{"name":"R_Title_Screen","path":"rooms/R_Title_Screen/R_Title_Screen.yy",},},
+    {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"Sc_Deactivate_Effects","path":"scripts/Sc_Deactivate_Effects/Sc_Deactivate_Effects.yy",},},
     {"id":{"name":"Sc_Draw_Controls","path":"scripts/Sc_Draw_Controls/Sc_Draw_Controls.yy",},},
     {"id":{"name":"Sc_Draw_Menu","path":"scripts/Sc_Draw_Menu/Sc_Draw_Menu.yy",},},

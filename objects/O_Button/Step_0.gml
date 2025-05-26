@@ -32,7 +32,7 @@ else{
 	image_xscale = lerp(image_xscale, normal_xscale, 0.4);
 	image_yscale = lerp(image_yscale, normal_yscale, 0.4);
 }
-if check_valid_button and is_selected{ //Executer le bouton
+if check_valid_button and is_selected{ //Executer le bouton séléctionné
 	switch button_id{
 		case 0:
 			room_goto(R_Level1);
@@ -43,4 +43,3 @@ if check_valid_button and is_selected{ //Executer le bouton
 			break;
 	}
 }
-//show_debug_message();

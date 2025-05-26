@@ -1,4 +1,4 @@
-var check_confirm_button = keyboard_check_pressed(vk_anykey) or gamepad_button_check_pressed(0, gp_face1);
+var check_confirm_button = keyboard_check_pressed(vk_anykey) or gamepad_button_check_pressed(0, gp_face1) or mouse_check_button_pressed(mb_any);
 if is_dead and check_confirm_button{
 	Sc_Deactivate_Effects();
 	instance_activate_object(O_Player);

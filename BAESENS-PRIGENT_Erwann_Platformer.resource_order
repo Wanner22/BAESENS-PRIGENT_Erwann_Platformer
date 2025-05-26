@@ -74,6 +74,7 @@
     {"name":"R_Level2","order":4,"path":"rooms/R_Level2/R_Level2.yy",},
     {"name":"R_RoomParent","order":2,"path":"rooms/R_RoomParent/R_RoomParent.yy",},
     {"name":"R_Title_Screen","order":5,"path":"rooms/R_Title_Screen/R_Title_Screen.yy",},
+    {"name":"RoomUI","order":15,"path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"Sc_Deactivate_Effects","order":12,"path":"scripts/Sc_Deactivate_Effects/Sc_Deactivate_Effects.yy",},
     {"name":"Sc_Draw_Menu","order":1,"path":"scripts/Sc_Draw_Menu/Sc_Draw_Menu.yy",},
     {"name":"Sc_Green_Vignette","order":4,"path":"scripts/Sc_Green_Vignette/Sc_Green_Vignette.yy",},
