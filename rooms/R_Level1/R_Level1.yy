@@ -265,7 +265,7 @@
         {"$GMRInstance":"v2","%Name":"inst_6D74F009","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6D74F009","objectId":{"name":"O_Coin","path":"objects/O_Coin/O_Coin.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":3760.0,"y":880.0,},
       ],"layers":[],"name":"Collectibles","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Environment","depth":1200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":false,"layers":[],"name":"Environment","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":69,"SerialiseWidth":124,"TileCompressedData":[
-          -61,48,1,45,-42,31,1,46,-7,48,1,30,-11,-2147483648,2,48,45,-59,31,1,3,-42,0,1,29,-7,48,1,30,-11,-2147483648,
+          -74,48,1,45,-29,31,1,46,-7,48,1,30,-11,-2147483648,2,48,45,-72,31,1,3,-29,0,1,29,-7,48,1,30,-11,-2147483648,
           2,48,30,-102,-2147483648,1,29,-7,48,1,30,-11,-2147483648,2,48,30,-102,-2147483648,1,29,-7,48,1,30,-11,
           -2147483648,2,31,3,-102,-2147483648,1,29,-7,48,1,30,-11,-2147483648,1,0,-103,-2147483648,1,29,-7,48,
           1,30,-11,-2147483648,1,0,-81,-2147483648,3,10,15,12,-8,-2147483648,4,10,15,12,0,-7,-2147483648,1,29,

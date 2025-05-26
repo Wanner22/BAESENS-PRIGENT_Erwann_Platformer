@@ -134,6 +134,7 @@ if check_aim_button and is_grounded and O_Gun_Manager.can_shoot{
 	is_aiming = true;
 	xsp = 0;
 	if check_shoot_button and O_Gun_Manager.bullet_amount > 0{
+		Sc_Vibrations(0.1, 0.1);
 		O_Gun_Manager.bullet_amount--;
 		if gamepad_is_connected(0) and l_stick_dir_y + l_stick_dir_x != 0{
 			instance_create_layer(x, y - 17, "Player", O_Bullet);

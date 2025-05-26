@@ -6,8 +6,6 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_1ECEE0B2","path":"rooms/R_Test/R_Test.yy",},
-    {"name":"inst_7B63A4DD","path":"rooms/R_Test/R_Test.yy",},
     {"name":"inst_209A9903","path":"rooms/R_Test/R_Test.yy",},
     {"name":"inst_27E95F66","path":"rooms/R_Test/R_Test.yy",},
     {"name":"inst_1624AD9E","path":"rooms/R_Test/R_Test.yy",},
@@ -117,8 +115,6 @@
         {"$GMRInstance":"v2","%Name":"inst_6C8E0548","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6C8E0548","objectId":{"name":"O_Chest_Manager","path":"objects/O_Chest_Manager/O_Chest_Manager.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"O_Chest_Manager","path":"objects/O_Chest_Manager/O_Chest_Manager.yy",},"propertyId":{"name":"obj","path":"objects/O_Chest_Manager/O_Chest_Manager.yy",},"resource":{"name":"S_Coin","path":"sprites/S_Coin/S_Coin.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"S_Coin",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1088.0,"y":224.0,},
-        {"$GMRInstance":"v2","%Name":"inst_1ECEE0B2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1ECEE0B2","objectId":{"name":"O_Enemy","path":"objects/O_Enemy/O_Enemy.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":384.0,},
-        {"$GMRInstance":"v2","%Name":"inst_7B63A4DD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7B63A4DD","objectId":{"name":"O_Enemy","path":"objects/O_Enemy/O_Enemy.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":464.0,"y":256.0,},
         {"$GMRInstance":"v2","%Name":"inst_4BE3E6E5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4BE3E6E5","objectId":{"name":"O_Locked_Door","path":"objects/O_Locked_Door/O_Locked_Door.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":832.0,"y":384.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Collectibles","depth":1100,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
