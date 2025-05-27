@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"So_Single_Droplet",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.88800454,
+  "name":"So_Single_Droplet",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"So_Single_Droplet.mp3",
+  "type":0,
+  "volume":1.0,
+}

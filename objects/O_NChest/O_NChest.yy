@@ -6,6 +6,7 @@
   "name":"O_NChest",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"O_Chest_Manager","path":"objects/O_Chest_Manager/O_Chest_Manager.yy",},"propertyId":{"name":"opened_spr","path":"objects/O_Chest_Manager/O_Chest_Manager.yy",},"resource":{"name":"S_NChest_Opened","path":"sprites/S_NChest_Opened/S_NChest_Opened.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"S_NChest_Opened",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"O_Chest_Manager","path":"objects/O_Chest_Manager/O_Chest_Manager.yy",},"propertyId":{"name":"closed_sprite","path":"objects/O_Chest_Manager/O_Chest_Manager.yy",},"resource":{"name":"S_NChest_Closed","path":"sprites/S_NChest_Closed/S_NChest_Closed.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"S_NChest_Closed",},
   ],
   "parent":{
     "name":"Chests",

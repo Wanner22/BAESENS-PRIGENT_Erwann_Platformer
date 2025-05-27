@@ -49,13 +49,27 @@ if place_meeting(x, y + 1, O_Collision_Manager.collisions){
 	is_grounded = true;
 	ysp = 0;
 	if keyboard_check_pressed(vk_space) or gamepad_button_check_pressed(0,gp_face1){
+		randomize();
+		var whoosh_index = irandom_range(0, 2);
+		var whoosh = -1;
+		if whoosh_index == 0 whoosh = So_Whoosh1
+		else if whoosh_index == 1 whoosh = So_Whoosh2
+		else if whoosh_index == 2 whoosh = So_Whoosh3
+		audio_play_sound(whoosh, 0, false, 0.4);
 		ysp = -jump_speed;
 	}
 }
 else is_grounded = false;
 
 //Attaque
-if check_attack_button and can_attack and not is_aiming{	
+if check_attack_button and can_attack and not is_aiming{
+	randomize();
+	var whoosh_index = irandom_range(0, 2);
+	var whoosh = -1;
+	if whoosh_index == 0 whoosh = So_Whoosh1
+	else if whoosh_index == 1 whoosh = So_Whoosh2
+	else if whoosh_index == 2 whoosh = So_Whoosh3
+	audio_play_sound(whoosh, 0, false);
 	image_index = 0	
 	alarm_set(5, 20); //n_attack = 0
 	n_attack++;
@@ -70,6 +84,13 @@ if check_attack_button and can_attack and not is_aiming{
 
 //Parade
 if check_parry_button and can_parry and not is_aiming{
+	randomize();
+	var whoosh_index = irandom_range(0, 2);
+	var whoosh = -1;
+	if whoosh_index == 0 whoosh = So_Whoosh1
+	else if whoosh_index == 1 whoosh = So_Whoosh2
+	else if whoosh_index == 2 whoosh = So_Whoosh3
+	audio_play_sound(whoosh, 0, false);
 	image_index = 0
 	is_parrying = true;
 	O_Parry.image_index = 0; //Reset l'animation
@@ -110,6 +131,7 @@ if check_aim_button and is_grounded and O_Gun_Manager.can_shoot{
 	is_aiming = true;
 	xsp = 0;
 	if check_shoot_button and O_Gun_Manager.bullet_amount > 0{
+		audio_play_sound(So_Gun_Shot, 0, false, 0.5);
 		Sc_Vibrations(0.1, 0.1);
 		O_Gun_Manager.bullet_amount--;
 		if gamepad_is_connected(0) and l_stick_dir_y + l_stick_dir_x != 0{
@@ -130,6 +152,7 @@ else {
 
 //Dash
 if check_dash_button and can_dash{
+	audio_play_sound(So_Dash, 0, false);
 	Sc_Zoom_Blur();
 	Sc_Screen_Shake();
 	alarm_set(6, 7); //is_dashing = false

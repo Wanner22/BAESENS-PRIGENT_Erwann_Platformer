@@ -10,3 +10,4 @@ else{
 if boss_hp <= 0{
 	instance_destroy(self);
 }
+if (instance_exists(O_Tentacle) or instance_exists(O_Tentacle_Parry)) and not audio_is_playing(So_Earthquake) audio_play_sound(So_Earthquake, 0, false);

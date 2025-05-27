@@ -4,11 +4,17 @@ if not is_stuned and not O_Death_Manager.is_dead{
 	ysp += global.gravity_force;
 	
 	//Détecte le joueur à une certaine distance
-	if abs(distancex_to_player) < fov event_user(1); //player_detected = true
-	else if distance_to_object(O_Player) > fov event_user(2); //player_detected = false
+	if distance_to_object(O_Player) < fov{
+		event_user(1); //player_detected = true
+		if not audio_is_playing(So_Whispers) audio_play_sound(So_Whispers, 0, true);
+	}
+	else if distance_to_object(O_Player) > fov {
+		event_user(2); //player_detected = false
+	}
 	
 	//Avancer vers le joueur quand il est détecté
-	if player_detected == true{
+	if player_detected{
+		
 		if distancex_to_player < 0 move_speed = -2.5; //Avancer vers la gauche
 		else if distancex_to_player > 0 move_speed = 2.5; //Avancer vers la droite
 	}
@@ -42,7 +48,10 @@ if not is_stuned and not O_Death_Manager.is_dead{
 	if sign(move_speed) == 1 image_xscale = -1;
 	
 	//Destroy si plus de PVs
-	if enemy_hp <= 0 instance_destroy(self);
+	if enemy_hp <= 0{
+		audio_stop_sound(So_Whispers);
+		instance_destroy(self);
+	}
 
 	//Changer l'alpha du sprite quand il est invincible
 	if is_invincible image_alpha = 0.5;
