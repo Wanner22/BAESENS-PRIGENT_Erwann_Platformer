@@ -1,2 +1,2 @@
-/// @description Destroy le projectile
+/// @description Destroy la balle
 instance_destroy();

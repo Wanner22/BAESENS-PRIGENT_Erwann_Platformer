@@ -8,6 +8,5 @@ else{
 	y = ystart;
 	sprite_index = S_Boss_Stuned_Eyes;
 }
-if O_Boss.boss_hp <= 0{
-	instance_destroy();
-}
+
+if O_Boss.boss_hp <= 0 instance_destroy();

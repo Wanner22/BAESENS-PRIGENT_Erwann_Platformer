@@ -1,8 +1,12 @@
+//Debug et paramètres
 window_set_size(1366, 768);
 gpu_set_tex_filter(false); //Enlève le filtre qui floute les pixels
-show_debug_overlay(false);
+show_debug_overlay(true);
 layer_set_visible("Collisions", false);
 is_debug = false;
+debug_room = R_Level2;
+
+//Variables gameplay
 shoot_dir = 0;
 move_speed = 4.5;
 jump_speed = 8;
@@ -25,6 +29,9 @@ is_aiming = false;
 is_grounded = true;
 pos_x = 0;
 pos_y = 0;
+whoosh = -1;
+gain = 0;
+
 gamepad_set_vibration(0, 0, 0);
 gamepad_set_axis_deadzone(0, 0.4);
 instance_create_layer(x + 32, y, "Collisions", O_Action_Collision);
@@ -33,7 +40,5 @@ instance_create_layer(x + 32, y, "Player", O_Parry);
 instance_create_layer(x, y - 10, "Player", O_Player_Arm);
 
 if is_debug{
-	if room != R_Level2{
-		room_goto(R_Level2);
-	}
+	if room != debug_room room_goto(debug_room);
 }

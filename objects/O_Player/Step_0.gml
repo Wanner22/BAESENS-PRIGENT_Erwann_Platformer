@@ -49,13 +49,7 @@ if place_meeting(x, y + 1, O_Collision_Manager.collisions){
 	is_grounded = true;
 	ysp = 0;
 	if keyboard_check_pressed(vk_space) or gamepad_button_check_pressed(0,gp_face1){
-		randomize();
-		var whoosh_index = irandom_range(0, 2);
-		var whoosh = -1;
-		if whoosh_index == 0 whoosh = So_Whoosh1
-		else if whoosh_index == 1 whoosh = So_Whoosh2
-		else if whoosh_index == 2 whoosh = So_Whoosh3
-		audio_play_sound(whoosh, 0, false, 0.4);
+		Sc_Play_Randomized_Sound(whoosh, 0.1);
 		ysp = -jump_speed;
 	}
 }
@@ -63,13 +57,7 @@ else is_grounded = false;
 
 //Attaque
 if check_attack_button and can_attack and not is_aiming{
-	randomize();
-	var whoosh_index = irandom_range(0, 2);
-	var whoosh = -1;
-	if whoosh_index == 0 whoosh = So_Whoosh1
-	else if whoosh_index == 1 whoosh = So_Whoosh2
-	else if whoosh_index == 2 whoosh = So_Whoosh3
-	audio_play_sound(whoosh, 0, false);
+	Sc_Play_Randomized_Sound(whoosh, 0.7);
 	image_index = 0	
 	alarm_set(5, 20); //n_attack = 0
 	n_attack++;
@@ -84,13 +72,7 @@ if check_attack_button and can_attack and not is_aiming{
 
 //Parade
 if check_parry_button and can_parry and not is_aiming{
-	randomize();
-	var whoosh_index = irandom_range(0, 2);
-	var whoosh = -1;
-	if whoosh_index == 0 whoosh = So_Whoosh1
-	else if whoosh_index == 1 whoosh = So_Whoosh2
-	else if whoosh_index == 2 whoosh = So_Whoosh3
-	audio_play_sound(whoosh, 0, false);
+	Sc_Play_Randomized_Sound(whoosh, 0.7);
 	image_index = 0
 	is_parrying = true;
 	O_Parry.image_index = 0; //Reset l'animation

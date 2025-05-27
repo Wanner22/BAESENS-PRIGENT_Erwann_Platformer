@@ -9,15 +9,9 @@ if check_pause_button{
 	}
 }
 
-if not paused{
-	show_controls = false;
-}
+if not paused show_controls = false;
 
 if check_back_button{
-	if show_controls{
-		show_controls = false;
-	}
-	else if paused and not show_controls{
-		paused = false;
-	}
+	if show_controls show_controls = false;
+	else if paused and not show_controls paused = false;
 }

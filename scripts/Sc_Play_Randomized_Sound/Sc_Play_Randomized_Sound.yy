@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"Sc_Vibrations",
+  "%Name":"Sc_Play_Randomized_Sound",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Sc_Vibrations",
+  "name":"Sc_Play_Randomized_Sound",
   "parent":{
-    "name":"Effects",
-    "path":"folders/Scripts/Effects.yy",
+    "name":"Sounds",
+    "path":"folders/Scripts/Sounds.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

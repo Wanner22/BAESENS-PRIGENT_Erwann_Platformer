@@ -1,1 +1,1 @@
-Sc_Reduce_Enemy_Life()
+Sc_Reduce_Enemy_Life();
