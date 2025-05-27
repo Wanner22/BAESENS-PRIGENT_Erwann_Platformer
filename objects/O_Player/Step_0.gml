@@ -8,59 +8,41 @@ check_dash_button = keyboard_check_pressed(vk_shift) or gamepad_button_check_pre
 ysp += global.gravity_force;
 xsp = 0;
 
-
-if keyboard_check_pressed(ord("R")){
-	room_restart();
-}
-
-
 O_Action_Collision.y = y; //Fixe les coordonnées de O_Action_Collision en y
 
-//Visée
-if gamepad_is_connected(0){
-	shoot_dir = point_direction(x, y, x + l_stick_dir_x, y + l_stick_dir_y);
+if image_xscale == 1{
+	O_Action_Collision.x = x + sprite_width/2; //Fixe les coordonnées de O_Action_Collision en x
+	O_Action_Collision.image_xscale = 1; //Orienter le sprite
 }
-else {
-	shoot_dir = point_direction(x, y, mouse_x, mouse_y);
+else if image_xscale == -1{
+	O_Action_Collision.x = x + sprite_width/2; //Fixe les coordonnées de O_Action_Collision en x
+	O_Action_Collision.image_xscale = -1; //Orienter le sprite
 }
+
+//Direction de la visée manette et souris
+if gamepad_is_connected(0) shoot_dir = point_direction(x, y, x + l_stick_dir_x, y + l_stick_dir_y);
+else shoot_dir = point_direction(x, y, mouse_x, mouse_y);
 
 //Déplacement horizontal clavier
 xsp = (keyboard_check(ord("D")) - keyboard_check(ord("Q"))) * move_speed;
 
 
 //Déplacement horizontal manette
-if gamepad_is_connected(0){
-	xsp = l_stick_dir_x * move_speed;
-}
+if gamepad_is_connected(0) xsp = l_stick_dir_x * move_speed;
 
 //Changer le sprite IDLE ou Course
 if not is_aiming{
-	if xsp != 0 and is_grounded == true{
-		sprite_index = S_Player_Run;
-	}
-	else{
-		sprite_index = S_Player_IDLE;
-	}
+	if xsp != 0 and is_grounded == true sprite_index = S_Player_Run;
+	else sprite_index = S_Player_IDLE;
 }
-
 
 //Changer le sprite en fonction de la direction et fixe le O_Action_Collision devant le joueur
-if sign(xsp) == -1{
-	image_xscale = -1;
-	O_Action_Collision.x = x + sprite_width/2; //Fixe les coordonnées de O_Action_Collision en x
-	O_Action_Collision.image_xscale = -1; //Orienter le sprite
-}
-else if sign(xsp) == 1{
-	image_xscale = 1;
-	O_Action_Collision.x = x + sprite_width/2; //Fixe les coordonnées de O_Action_Collision en x
-	O_Action_Collision.image_xscale = 1; //Orienter le sprite
-}
+if sign(xsp) == -1 image_xscale = -1;
+else if sign(xsp) == 1 image_xscale = 1;
 
+//Se cogner au plafond
+if place_meeting(x, y - 1, O_Collision_Manager.collisions) ysp = global.gravity_force;
 //Saut et grounded
-if place_meeting(x, y - 1, O_Collision_Manager.collisions){
-	ysp = global.gravity_force;
-}
-
 if place_meeting(x, y + 1, O_Collision_Manager.collisions){
 	pos_x = xprevious;
 	pos_y = yprevious;
@@ -70,9 +52,7 @@ if place_meeting(x, y + 1, O_Collision_Manager.collisions){
 		ysp = -jump_speed;
 	}
 }
-else{
-	is_grounded = false;
-}
+else is_grounded = false;
 
 //Attaque
 if check_attack_button and can_attack and not is_aiming{	
@@ -110,12 +90,8 @@ if is_parrying{
 }
 
 //Changer l'alpha du sprite quand il est invincible
-if O_Player_Life_Manager.is_invincible == true{
-	image_alpha = 0.5;
-}
-else {
-	image_alpha = 1;
-}
+if O_Player_Life_Manager.is_invincible == true image_alpha = 0.5;
+else image_alpha = 1;
 
 //Tirs et visée
 if check_aim_button and is_grounded and O_Gun_Manager.can_shoot{
@@ -162,19 +138,12 @@ if check_dash_button and can_dash{
 	can_dash = false;
 }
 
-if is_dashing{
-	xsp = image_xscale * 25;
-}
+if is_dashing xsp = image_xscale * 25;
 
 //Changer le sprite du joueur quand il saute
 if not is_grounded and not is_attacking{
-	if ysp < 0{
-		sprite_index = S_Player_Jump_Up;
-	}
-	else if ysp > 0{
-		sprite_index = S_Player_Jump_Down;
-	}
+	if ysp < 0 sprite_index = S_Player_Jump_Up;
+	else if ysp > 0 sprite_index = S_Player_Jump_Down;
 }
-
 
 move_and_collide(xsp, ysp, O_Collision_Manager.collisions, 50);

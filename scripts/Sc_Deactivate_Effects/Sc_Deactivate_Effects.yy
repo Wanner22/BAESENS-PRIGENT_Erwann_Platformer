@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"Sc_Deactivate_Effects",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Effects",
+    "path":"folders/Scripts/Effects.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

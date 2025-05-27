@@ -1,3 +1,3 @@
 my_tilemap = layer_tilemap_get_id("Environment");
 collisions = [O_Collision, my_tilemap, O_Breakable];
-enemy_collisions = [O_Collision, my_tilemap, O_Breakable, O_Spike];
+enemy_collisions = [O_Collision, my_tilemap, O_Breakable, O_Spike, O_Bar];
