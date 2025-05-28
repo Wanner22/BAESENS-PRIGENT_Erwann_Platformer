@@ -26,15 +26,18 @@ else shoot_dir = point_direction(x, y, mouse_x, mouse_y);
 //Déplacement horizontal clavier
 xsp = (keyboard_check(ord("D")) - keyboard_check(ord("Q"))) * move_speed;
 
-
 //Déplacement horizontal manette
 if gamepad_is_connected(0) xsp = l_stick_dir_x * move_speed;
 
 //Changer le sprite IDLE ou Course
 if not is_aiming{
-	if xsp != 0 and is_grounded == true sprite_index = S_Player_Run;
+	if xsp != 0 and is_grounded{
+		sprite_index = S_Player_Run;
+		if image_index == 0 or image_index == 5 audio_play_sound(So_Step1, 0, false, 3);
+	}
 	else sprite_index = S_Player_IDLE;
 }
+
 
 //Changer le sprite en fonction de la direction et fixe le O_Action_Collision devant le joueur
 if sign(xsp) == -1 image_xscale = -1;
@@ -46,10 +49,11 @@ if place_meeting(x, y - 1, O_Collision_Manager.collisions) ysp = global.gravity_
 if place_meeting(x, y + 1, O_Collision_Manager.collisions){
 	pos_x = xprevious;
 	pos_y = yprevious;
+	if not is_grounded Sc_Play_Randomized_Sound("step", 3);
 	is_grounded = true;
 	ysp = 0;
 	if keyboard_check_pressed(vk_space) or gamepad_button_check_pressed(0,gp_face1){
-		Sc_Play_Randomized_Sound(whoosh, 0.1);
+		Sc_Play_Randomized_Sound("whoosh", 0.1);
 		ysp = -jump_speed;
 	}
 }
@@ -57,7 +61,7 @@ else is_grounded = false;
 
 //Attaque
 if check_attack_button and can_attack and not is_aiming{
-	Sc_Play_Randomized_Sound(whoosh, 0.7);
+	Sc_Play_Randomized_Sound("whoosh", 0.7);
 	image_index = 0	
 	alarm_set(5, 20); //n_attack = 0
 	n_attack++;
@@ -72,7 +76,7 @@ if check_attack_button and can_attack and not is_aiming{
 
 //Parade
 if check_parry_button and can_parry and not is_aiming{
-	Sc_Play_Randomized_Sound(whoosh, 0.7);
+	Sc_Play_Randomized_Sound("whoosh", 0.7);
 	image_index = 0
 	is_parrying = true;
 	O_Parry.image_index = 0; //Reset l'animation
@@ -131,9 +135,8 @@ else {
 	O_Player_Arm.visible = false;
 	is_aiming = false;
 }
-
 //Dash
-if check_dash_button and can_dash{
+if check_dash_button and can_dash and not is_aiming{
 	audio_play_sound(So_Dash, 0, false);
 	Sc_Zoom_Blur();
 	Sc_Screen_Shake();
@@ -145,10 +148,14 @@ if check_dash_button and can_dash{
 
 if is_dashing xsp = image_xscale * 25;
 
+//Subir des dégats sur l'ennemi bar
+if place_meeting(x + 1, y, O_Bar) or place_meeting(x - 1, y, O_Bar) Sc_Reduce_Player_Life(20, 90);
+
 //Changer le sprite du joueur quand il saute
 if not is_grounded and not is_attacking{
 	if ysp < 0 sprite_index = S_Player_Jump_Up;
 	else if ysp > 0 sprite_index = S_Player_Jump_Down;
 }
+if sprite_index == S_Player_Run and floor(image_index) == 0 or floor(image_index) == 5 Sc_Play_Randomized_Sound("step", 1);
 
 move_and_collide(xsp, ysp, O_Collision_Manager.collisions, 50);

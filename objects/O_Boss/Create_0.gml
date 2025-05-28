@@ -1,5 +1,6 @@
 randomize();
-throw_time = random_range(60, 150);
+throw_time = random_range(120, 180);
+stun_time = 210;
 obj = 0;
 tenta = 0;
 is_stuned = false;

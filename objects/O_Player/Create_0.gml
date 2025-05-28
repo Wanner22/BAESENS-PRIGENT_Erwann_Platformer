@@ -3,7 +3,7 @@ window_set_size(1366, 768);
 gpu_set_tex_filter(false); //Enlève le filtre qui floute les pixels
 show_debug_overlay(true);
 layer_set_visible("Collisions", false);
-is_debug = false;
+is_debug = true;
 debug_room = R_Boss;
 
 //Variables gameplay
@@ -29,8 +29,6 @@ is_aiming = false;
 is_grounded = true;
 pos_x = 0;
 pos_y = 0;
-whoosh = -1;
-gain = 0;
 
 gamepad_set_vibration(0, 0, 0);
 gamepad_set_axis_deadzone(0, 0.4);
