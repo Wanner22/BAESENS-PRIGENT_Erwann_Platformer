@@ -16,6 +16,9 @@
     {"name":"inst_3AE4A900","path":"rooms/R_Boss/R_Boss.yy",},
     {"name":"inst_1E8CE64C","path":"rooms/R_Boss/R_Boss.yy",},
     {"name":"inst_FCD6686","path":"rooms/R_Boss/R_Boss.yy",},
+    {"name":"inst_79125F85","path":"rooms/R_Boss/R_Boss.yy",},
+    {"name":"inst_67D592E2","path":"rooms/R_Boss/R_Boss.yy",},
+    {"name":"inst_40ABDBA4","path":"rooms/R_Boss/R_Boss.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -69,6 +72,9 @@
       ],"layers":[],"name":"Projectiles","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Boss","depth":1240,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_A266D8F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_A266D8F","objectId":{"name":"O_Boss","path":"objects/O_Boss/O_Boss.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.5,"scaleY":3.5,"x":352.0,"y":160.0,},
+        {"$GMRInstance":"v2","%Name":"inst_79125F85","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_79125F85","objectId":{"name":"O_Boss_Weakness","path":"objects/O_Boss_Weakness/O_Boss_Weakness.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":576.0,"y":64.0,},
+        {"$GMRInstance":"v2","%Name":"inst_67D592E2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_67D592E2","objectId":{"name":"O_Boss_Weakness","path":"objects/O_Boss_Weakness/O_Boss_Weakness.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":160.0,"y":112.0,},
+        {"$GMRInstance":"v2","%Name":"inst_40ABDBA4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_40ABDBA4","objectId":{"name":"O_Boss_Weakness","path":"objects/O_Boss_Weakness/O_Boss_Weakness.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":320.0,"y":32.0,},
       ],"layers":[],"name":"Boss","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Black_Eyes","depth":1260,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_63D12B38","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_63D12B38","objectId":{"name":"O_Boss_Black_Eyes","path":"objects/O_Boss_Black_Eyes/O_Boss_Black_Eyes.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.5,"scaleY":3.5,"x":352.0,"y":224.0,},

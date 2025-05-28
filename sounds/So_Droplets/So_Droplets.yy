@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":23.614695,
+  "duration":19.869797,
   "name":"So_Droplets",
   "parent":{
     "name":"Sounds",

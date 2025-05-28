@@ -1,6 +1,7 @@
 if O_Player.check_attack_button and not is_opened{
 	switch obj {
 		case S_Coin:
+		audio_play_sound(So_Coin, 0, false);
 			O_Coin_Manager.coin_amount += 20;
 			is_opened = true;
 		break;
@@ -15,6 +16,7 @@ if O_Player.check_attack_button and not is_opened{
 			break;
 		
 		case S_Key:
+		audio_play_sound(So_Coin, 0, false);
 			O_Key_Manager.key_amount += 1;
 			is_opened = true;
 			break;

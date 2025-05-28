@@ -1,0 +1,1 @@
+if room != R_End room_goto(R_End);

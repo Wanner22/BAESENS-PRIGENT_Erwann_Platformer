@@ -4,7 +4,7 @@ gpu_set_tex_filter(false); //Enlève le filtre qui floute les pixels
 show_debug_overlay(true);
 layer_set_visible("Collisions", false);
 is_debug = false;
-debug_room = R_Level2;
+debug_room = R_Boss;
 
 //Variables gameplay
 shoot_dir = 0;
