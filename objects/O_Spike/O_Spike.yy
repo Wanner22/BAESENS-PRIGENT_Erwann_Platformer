@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"S_Spike",
-    "path":"sprites/S_Spike/S_Spike.yy",
+    "name":"S_Spike2",
+    "path":"sprites/S_Spike2/S_Spike2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

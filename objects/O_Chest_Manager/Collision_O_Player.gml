@@ -12,7 +12,10 @@ if O_Player.check_attack_button and not is_opened{
 				Sc_Green_Vignette();
 				is_opened = true;
 			}
-			else is_opened = false;
+			else {
+				is_opened = false;
+				Sc_Show_Text("Je n'ai pas besoin de soin pour l'instant");
+			}
 			break;
 		
 		case S_Key:

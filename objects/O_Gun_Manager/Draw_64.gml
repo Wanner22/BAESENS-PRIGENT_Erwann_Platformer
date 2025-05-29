@@ -1,4 +1,4 @@
-if can_shoot{
+if can_shoot and room != R_End{
 	draw_set_font(F_UI);
 	draw_set_color(c_white);
 	draw_set_halign(fa_left);

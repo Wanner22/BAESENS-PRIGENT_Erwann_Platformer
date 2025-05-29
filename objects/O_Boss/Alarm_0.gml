@@ -7,6 +7,5 @@ if not is_stuned{
 		else instance_create_layer(O_Tentacle_Spawner.x, O_Tentacle_Spawner.y, "Projectiles", O_Tentacle);
 	}
 	else instance_create_layer(-32, random_range(0, 200), "Projectiles", O_Barrel); //Lancer le tonneau
-	randomize();
 	alarm_set(0, throw_time); //Créer l'objet
 }
