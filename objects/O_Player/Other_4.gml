@@ -1,1 +1,0 @@
-if room == R_Level2 Sc_Show_Text("Je devrai pouvoir etourdir les attaques ennemis en parant leurs attaques au bon moment");

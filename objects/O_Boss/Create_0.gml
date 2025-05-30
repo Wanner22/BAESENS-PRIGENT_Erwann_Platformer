@@ -6,5 +6,5 @@ tenta = 0;
 is_stuned = false;
 boss_hp = 40;
 is_invincible = false;
+killed_tentacle = false;
 alarm_set(0, throw_time); //Créer le projectile
-alarm_set(3, 300); //Créer tentacule parables si toujours pas apparu

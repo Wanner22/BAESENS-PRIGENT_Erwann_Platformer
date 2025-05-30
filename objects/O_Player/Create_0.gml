@@ -35,7 +35,7 @@ gamepad_set_axis_deadzone(0, 0.4);
 instance_create_layer(x + 32, y, "Collisions", O_Action_Collision);
 instance_create_layer(x + 32, y, "Player", O_Attack);
 instance_create_layer(x + 32, y, "Player", O_Parry);
-instance_create_layer(x, y - 10, "Player", O_Player_Arm);
+instance_create_layer(x, y - 10, "Player_Arm", O_Player_Arm);
 
 if is_debug{
 	if room != debug_room room_goto(debug_room);

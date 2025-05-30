@@ -12,8 +12,8 @@
   "duration":32.052246,
   "name":"So_Enemy_Music",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

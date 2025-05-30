@@ -158,4 +158,15 @@ if not is_grounded and not is_attacking{
 }
 if sprite_index == S_Player_Run and floor(image_index) == 0 or floor(image_index) == 5 Sc_Play_Randomized_Sound("step", 1);
 
+if instance_exists(O_Enemy) and distance_to_object(O_Enemy) <= O_Enemy.fov{
+	audio_pause_sound(So_General_Music);
+	if not audio_is_playing(So_Whispers) audio_play_sound(So_Whispers, 0, true);
+	if not audio_is_playing(So_Enemy_Music) audio_play_sound(So_Enemy_Music, 0, true, 3);
+}
+else{
+	if audio_is_playing(So_Enemy_Music) audio_stop_sound(So_Enemy_Music);
+	if audio_is_playing(So_Whispers) audio_stop_sound(So_Whispers);
+	if audio_is_paused(So_General_Music) audio_resume_sound(So_General_Music);
+}
+
 move_and_collide(xsp, ysp, O_Collision_Manager.collisions, 50);

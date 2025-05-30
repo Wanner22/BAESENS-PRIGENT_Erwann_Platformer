@@ -11,7 +11,11 @@ if boss_hp <= 15 and not is_stuned{
 	O_Boss_Black_Eyes.sprite_index = S_Boss_Red_Eyes;
 	O_Boss_White_Eyes.sprite_index = S_Boss_Red_White_Eyes;
 }
-else if boss_hp <= 25 throw_time = random_range(120, 180);
+else if boss_hp <= 25{
+	throw_time = random_range(120, 180);
+	if instance_exists(O_Tentacle_Parry) and is_stuned alarm_set(3, 900); //Créer tentacule parables si toujours pas apparu
+	if alarm_get(4) <= 0 alarm_set(4, 1200); //Afficher le texte d'aide
+}
 if boss_hp <= 0{
 	with(O_Player){
 		if alarm_get(8) <= 0 alarm_set(8, 150);

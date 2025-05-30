@@ -4,10 +4,7 @@ if not is_stuned and not O_Player_Death_Manager.is_dead{
 	ysp += global.gravity_force;
 	
 	//Détecte le joueur à une certaine distance
-	if distance_to_object(O_Player) < fov{
-		event_user(1); //player_detected = true
-		if not audio_is_playing(So_Whispers) audio_play_sound(So_Whispers, 0, true);
-	}
+	if distance_to_object(O_Player) < fov event_user(1); //player_detected = true
 	else if distance_to_object(O_Player) > fov event_user(2); //player_detected = false
 	
 	//Avancer vers le joueur quand il est détecté
@@ -49,6 +46,7 @@ if not is_stuned and not O_Player_Death_Manager.is_dead{
 	//Destroy si plus de PVs
 	if enemy_hp <= 0{
 		audio_stop_sound(So_Whispers);
+		audio_stop_sound(So_Enemy_Music);
 		instance_destroy(self);
 	}
 
@@ -56,4 +54,5 @@ if not is_stuned and not O_Player_Death_Manager.is_dead{
 	if is_invincible image_alpha = 0.5;
 	else image_alpha = 1;
 }
+
 move_and_collide(xsp, ysp, O_Collision_Manager.enemy_collisions, 50);
