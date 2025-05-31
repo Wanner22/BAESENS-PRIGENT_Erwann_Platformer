@@ -1,3 +1,3 @@
 hp--;
-effect_create_above(ef_smoke, x, y, 1, c_black);
+instance_create_layer(x, y, "Effects", O_Smoke);
 Sc_Screen_Shake();

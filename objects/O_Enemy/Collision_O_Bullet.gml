@@ -1,1 +1,1 @@
-Sc_Reduce_Enemy_Life();
+event_user(0)

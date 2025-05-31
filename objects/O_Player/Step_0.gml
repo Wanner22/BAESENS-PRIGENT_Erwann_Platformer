@@ -67,7 +67,7 @@ if check_attack_button and can_attack and not is_aiming{
 	n_attack++;
 	is_attacking = true;
 	O_Attack.image_index = 0; // Reset l'animation
-	alarm_set(0, 20); //is_attacking = false
+	alarm_set(0, 10); //is_attacking = false
 	if alarm_get(4) <= 0 and n_attack >= 3{
 		alarm_set(4, 45); // cooldown après le combo
 		can_attack = false;
@@ -80,7 +80,7 @@ if check_parry_button and can_parry and not is_aiming{
 	image_index = 0
 	is_parrying = true;
 	O_Parry.image_index = 0; //Reset l'animation
-	alarm_set(1, 15); //is_parrying = true
+	alarm_set(1, 18); //is_parrying = false
 	alarm_set(3, 30); //cooldown parade
 	can_parry = false;
 }
@@ -120,7 +120,8 @@ if check_aim_button and is_grounded and O_Gun_Manager.can_shoot{
 		audio_play_sound(So_Gun_Shot, 0, false, 0.5);
 		Sc_Vibrations(0.1, 0.1);
 		O_Gun_Manager.bullet_amount--;
-		if gamepad_is_connected(0) and l_stick_dir_y + l_stick_dir_x != 0{
+		if gamepad_is_connected(0){
+			if l_stick_dir_y + l_stick_dir_x == 0 shoot_dir = 0;
 			instance_create_layer(x, y - 17, "Instances", O_Bullet);
 		}
 		else if not gamepad_is_connected(0){
@@ -152,7 +153,7 @@ if is_dashing xsp = image_xscale * 25;
 if place_meeting(x + 1, y, O_Bar) or place_meeting(x - 1, y, O_Bar) Sc_Reduce_Player_Life(20, 90);
 
 //Changer le sprite du joueur quand il saute
-if not is_grounded and not is_attacking{
+if not is_grounded and not is_attacking and not is_parrying{
 	if ysp < 0 sprite_index = S_Player_Jump_Up;
 	else if ysp > 0 sprite_index = S_Player_Jump_Down;
 }

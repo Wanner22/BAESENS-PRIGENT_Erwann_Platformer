@@ -18,7 +18,7 @@ if not is_stuned and not O_Player_Death_Manager.is_dead{
 	//S'arrêter devant le joueur et l'attaquer
 	if distance_to_object(O_Player) < 7{
 		move_speed = 0;
-		if alarm_get(1) <= 0 and alarm_get(2) <= 0 alarm_set(1, 10); //Prepare attack
+		if alarm_get(1) <= 0 and alarm_get(2) <= 0 alarm_set(1, 20); //Prepare attack
 	}
 	else sprite_index = S_Enemy;
 

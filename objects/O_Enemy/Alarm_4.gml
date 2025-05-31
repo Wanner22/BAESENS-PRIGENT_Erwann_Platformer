@@ -1,2 +1,2 @@
 /// @description Afficher l'indice de parade
-effect_create_above(ef_spark, x, y - 16, 1, c_red);
+instance_create_layer(x, y - 16, "Effects", O_Red_Spark);
