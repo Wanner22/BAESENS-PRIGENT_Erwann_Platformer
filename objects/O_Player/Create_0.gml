@@ -1,10 +1,10 @@
 //Debug et paramètres
-window_set_size(1366, 768);
+window_set_size(1920, 1080);
 gpu_set_tex_filter(false); //Enlève le filtre qui floute les pixels
 show_debug_overlay(false);
 layer_set_visible("Collisions", false);
 is_debug = false;
-debug_room = R_End;
+debug_room = R_Boss;
 
 //Variables gameplay
 shoot_dir = 0;

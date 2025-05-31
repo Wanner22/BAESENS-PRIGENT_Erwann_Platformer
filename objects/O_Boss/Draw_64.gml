@@ -1,1 +1,1 @@
-draw_healthbar(1920 - 90, 400, 1920 - 32, 900, boss_hp * 100 / 40, c_grey, c_red, c_green, 3, true, true);
+draw_healthbar(1920 - 90, 400, 1920 - 32, 900, boss_hp * 100 / 40, c_grey, c_purple, c_red, 3, true, true);
