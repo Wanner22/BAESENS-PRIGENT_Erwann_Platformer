@@ -121,10 +121,10 @@ if check_aim_button and is_grounded and O_Gun_Manager.can_shoot{
 		Sc_Vibrations(0.1, 0.1);
 		O_Gun_Manager.bullet_amount--;
 		if gamepad_is_connected(0) and l_stick_dir_y + l_stick_dir_x != 0{
-			instance_create_layer(x, y - 17, "Player", O_Bullet);
+			instance_create_layer(x, y - 17, "Instances", O_Bullet);
 		}
 		else if not gamepad_is_connected(0){
-			instance_create_layer(x, y - 17, "Player", O_Bullet);
+			instance_create_layer(x, y - 17, "Instances", O_Bullet);
 		}
 		with(O_Gun_Manager){
 			alarm_set(0, 150);
@@ -158,6 +158,7 @@ if not is_grounded and not is_attacking{
 }
 if sprite_index == S_Player_Run and floor(image_index) == 0 or floor(image_index) == 5 Sc_Play_Randomized_Sound("step", 1);
 
+//Jouer la musique ennemie
 if instance_exists(O_Enemy) and distance_to_object(O_Enemy) <= O_Enemy.fov{
 	audio_pause_sound(So_General_Music);
 	if not audio_is_playing(So_Whispers) audio_play_sound(So_Whispers, 0, true);
