@@ -15,6 +15,6 @@ function Sc_Play_Randomized_Sound(type, gain){
 		else if step_index == 1 my_step = So_Step2;
 		else if step_index == 2 my_step = So_Step3;
 		else if step_index == 3 my_step = So_Step4;
-		audio_play_sound(my_step, 0, false, gain);
+		if not audio_is_playing(my_step) audio_play_sound(my_step, 0, false, gain);
 	}
 }
